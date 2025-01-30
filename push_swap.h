@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/01/30 18:04:25 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/01/30 19:01:23 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 # include <unistd.h>
 # include <limits.h>
 
-int	ft_push()
-int	ft_reverse_rotate()
-int	ft_rotate()
-int	ft_swap()
+//fonction principal et main
+int	main(int argc, char **argv)
 int	push_swap()
 
 //check error arguments
@@ -26,5 +24,18 @@ void	ft_check_arguments(char *str);
 void	ft_check_only_num(char *str);
 void	ft_check_max_min_int(char *str);
 void	ft_check_doublon()
+
+//mouvements possibles
+int	ft_reverse_rotate_rra()
+int	ft_reverse_rotate_rrb()
+int	ft_reverse_rotate_rrr()
+int	ft_rotate_ra()
+int	ft_rotate_rb()
+int	ft_rotate_rr()
+int	ft_swap_sa()
+int	ft_swap_sb()
+int	ft_swap_ss()
+int	ft_push_pa()
+int	ft_push_pb()
 
 #endif

@@ -6,7 +6,7 @@
 #    By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/30 15:34:26 by lduflot           #+#    #+#              #
-#    Updated: 2025/01/30 16:09:00 by lduflot          ###   ########.fr        #
+#    Updated: 2025/01/30 18:42:50 by lduflot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,17 @@ NAME = pushswap.a
 ###############################
 ##SOURCES
 
-FILES = \
+FILES =	ft_check_max_min_int.c \
+				ft_check_only_num.c \
+				ft_check_doublon.c \
+				ft_check_max_min_int.c \
+				ft_check_only_num.c \
+				ft_push.c \
+				ft_reverse_rotate.c \
+				ft_rotate.c \
+				ft_swap.c \
+				main.c \
+				push_swap.c 
 
 OBJS = $(FILES:.c=.o)
 

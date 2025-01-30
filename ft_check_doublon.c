@@ -1,0 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_check_doublon.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/30 18:06:03 by lduflot           #+#    #+#             */
+/*   Updated: 2025/01/30 18:06:44 by lduflot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//verification que TOUS les arguments soient differents les uns des autres.
+void	ft_check_doublon()
+
