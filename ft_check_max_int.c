@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_check_max_int.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/01/30 16:36:58 by lduflot          ###   ########.fr       */
+/*   Created: 2025/01/30 16:37:20 by lduflot           #+#    #+#             */
+/*   Updated: 2025/01/30 16:43:45 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# defnit PUSH_SWAP_H
-# include <unistd.h>
+#include "push_swap.h"
 
-int	ft_push()
-int	ft_reverse_rotate()
-int	ft_rotate()
-int	ft_swap()
-int	push_swap()
+void	ft_check_max_int(char *str)
+{
+	int	i;
 
-//check error arguments
-void	ft_check_only_num(char *str);
-
-
-#endif
+	i = 0;
+	while (str[i] != "/0")
+		i++;
+	if (str == INT_MAX)
+	{
+		write(1, "Error\n", 6);
+		return (0);
+	}
+}

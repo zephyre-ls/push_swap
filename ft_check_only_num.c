@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_check_only_num.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/01/30 16:36:58 by lduflot          ###   ########.fr       */
+/*   Created: 2025/01/30 16:20:19 by lduflot           #+#    #+#             */
+/*   Updated: 2025/01/30 16:53:33 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# defnit PUSH_SWAP_H
-# include <unistd.h>
+#include "push_swap.h"
 
-int	ft_push()
-int	ft_reverse_rotate()
-int	ft_rotate()
-int	ft_swap()
-int	push_swap()
+//Verifie la presence uniquement de nombre/chiffre
+//Verifie sign et space.
+void	ft_check_only_num(char *str)
+{
+	int	i;
 
-//check error arguments
-void	ft_check_only_num(char *str);
-
-
-#endif
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (! (str[i] >= '0' && str[i] <= '9') || str[i] != ' '
+			|| str[i] != '+' || str[i] != '-')
+		{
+			write(1, "Error\n", 6)
+			return (0);
+		}
+		i++;
+	}
+}
