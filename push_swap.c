@@ -6,9 +6,21 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:38 by lduflot           #+#    #+#             */
-/*   Updated: 2025/01/30 15:57:43 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/01/30 18:02:10 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+//verifie que les arguments sont recevables.
+void	ft_check_arguments(char *str)
+{
+	while(str)
+	{
+		ft_check_only_num(str);
+		ft_check_max_min_int(str);
+		ft_check_doublon(str);
+	}
+}
+
+		
