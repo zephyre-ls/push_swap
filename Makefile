@@ -6,7 +6,7 @@
 #    By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/30 15:34:26 by lduflot           #+#    #+#              #
-#    Updated: 2025/01/30 15:38:10 by lduflot          ###   ########.fr        #
+#    Updated: 2025/01/30 16:09:00 by lduflot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-NAME = libftpushswap.a
+NAME = pushswap.a
 
 ###############################
 ##SOURCES
