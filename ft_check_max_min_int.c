@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 16:37:20 by lduflot           #+#    #+#             */
-/*   Updated: 2025/01/30 17:53:40 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/01/31 14:41:35 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ void	ft_check_max_min_int(char *str)
 			sign = -1;
 		i++;
 	}
-	while (str[i] != "\0")
+	while (str[i] != '\0')
 	{
 		num = num * 10 + (str[i] - '0');
 		if (num > INT_MAX)
 		{
 			write(1, "Error\n", 6);
-			return (0);
+			//return (0);
 		}
 		i++;
 	}
@@ -42,6 +42,6 @@ void	ft_check_max_min_int(char *str)
 	if (num > INT_MAX || num < INT_MIN)
 	{
 		write(1, "Error\n", 6);
-		return (0);
+		//return (0);
 	}
 }
