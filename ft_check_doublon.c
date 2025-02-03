@@ -2,22 +2,40 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_check_doublon.c                                 :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
+/*                                                    +:+ +:+   e       +:+   */
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 18:06:03 by lduflot           #+#    #+#             */
-/*   Updated: 2025/01/31 14:33:24 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/03 17:09:34 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 //verification que TOUS les arguments soient differents les uns des autres.
-void	ft_check_doublon()
+void	ft_check_doublon(int argc, char **argv)
 {
-	if (argv[i] == argv[j])
+	int	i;
+	int	j;
+	int	k;
+
+	i = 1;
+	while (i < argc)
 	{
-		write(1, "Error\n", 6);
-		return (0);
+		j = i + 1;
+		while (j < argc)
+		{
+			k = 0;
+			while (argv[i][k] != '\0' && argv[j][k] != '\0'
+				&& argv[i][k] == argv[j][k])
+				k++;
+			if (argv[i][k] == '\0' && argv[j][k] == '\0')
+			{
+				write(1, "Error\n", 6);
+				return ;
+			}
+			j++;
+		}
+		i++;
 	}
 }

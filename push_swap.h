@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/03 16:38:30 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/03 17:04:19 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 //void	ft_check_arguments(char *str);
 void	ft_check_only_num(char *str);
 void	ft_check_max_min_int(char *str);
-//void	ft_check_doublon(argv)
+void	ft_check_doublon(int argc, char **argv);
 
 /*mouvements possibles
 int	ft_reverse_rotate_rra()
