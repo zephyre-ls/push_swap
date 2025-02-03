@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:38:54 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/03 16:35:51 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/03 16:41:52 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	main(int argc, char **argv)
 	while(i < argc)
 	{
 		//	ft_check_doublon(argv[i]);
-		//	ft_check_max_min_int(argv[i]);
 		ft_check_only_num(argv[i]);
+		ft_check_max_min_int(argv[i]);
 		i++;
 	}
 	return(0);
