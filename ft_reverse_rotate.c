@@ -6,31 +6,58 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:55:48 by lduflot           #+#    #+#             */
-/*   Updated: 2025/01/30 18:58:59 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/06 16:43:57 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+//https://miage.univ-nantes.fr/miage/DVD-MIAGEv2/Algo_files/DVDMIAGE_Algo_Chapitre_10_Listes.pdf
+//exemple pile_a : [2] [4] [1] NULL
+//
+//		2		1
+//		4		2
+//		1		4
+//		a		a=ra 
 
-
-int	ft_reverse_rotate_rra(int a)
+void	ft_lstlast(t_list *lst)
 {
-rra (reverse rotate a) : Décale d’une position vers le bas tous les élements de
-la pile a. Le dernier élément devient le premier.
+	int	i;
+
+	i = 0;
+	if(lst != NULL)
+	{
+		while(lst->next != NULL)
+		{	
+			lst = lst->next;
+			i++;
+		}
+		return(lst)
 }
 
-int	ft_reverse_rotate_rrb(int b)
+void	ft_reverse_rotate_rra(pile *a)
 {
+		pile tmp_a;
 
-rrb (reverse rotate b) : Décale d’une position vers le bas tous les élements de
-la pile b. Le dernier élément devient le premier.
+		tmp_a = ft_lstlast(a); //tmp_a = 1
+		a = ft_lstadd_front(a, tmp_a); // a = [1] [2] [4] [1] = 1 de fin doit etre supprimer
+		//
 }
 
-int	ft_reverse_rotate_rrr(int a, int b)
+void	ft_reverse_rotate_rrb(pile *b)
 {
-rrr : rra et rrb en même temps.
+
 }
 
+void	ft_reverse_rotate_rrr(pile *a, pile *b)
+{
+}
 
-
+void	ft_lstadd_back(t_list *lst, t_list *new)
+{
+	if(lst == NULL)
+		lst = new;
+	while(lst->next && lst != NULL)
+		lst = lst->next
+	lst->next = new;
+}
 

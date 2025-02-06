@@ -6,7 +6,7 @@
 #    By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/30 15:34:26 by lduflot           #+#    #+#              #
-#    Updated: 2025/01/30 18:42:50 by lduflot          ###   ########.fr        #
+#    Updated: 2025/02/06 12:32:50 by lduflot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ FILES =	ft_check_max_min_int.c \
 				ft_rotate.c \
 				ft_swap.c \
 				main.c \
+				ft_list_manip.c \
 				push_swap.c 
 
 OBJS = $(FILES:.c=.o)
