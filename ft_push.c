@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:55:27 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/07 10:13:45 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/07 17:49:38 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 //						a		b
 
 //Premier element au sommet de b go sommet de a;
-void	ft_push_pa(pile **a, pile **b)
+void	ft_push_pa(t_pile **a, t_pile **b)
 {
 	pile *tmp_b;
 //	pile *first_a;
@@ -35,7 +35,7 @@ void	ft_push_pa(pile **a, pile **b)
 }
 
 //Premier element au sommet de a go sommet de b;
-void	ft_push_pb(pile **b, pile **a)
+void	ft_push_pb(t_pile **b, t_pile **a)
 {
 	pile	*tmp_a;
 

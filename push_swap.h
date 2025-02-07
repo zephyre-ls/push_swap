@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/07 10:34:48 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/07 17:47:46 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ typedef struct s_pile {
 // deux pointeur (a et b) chacun pointe vers la tete d une liste chaine 
 // a = contient tous les arguments donnes au pgrommae
 // b = vide au debut sert unisauement a trier les nombres avec les deplacement
-typedef struct pile {
-	t_list *a;
-	t_list *b;
-}					pile;
+typedef struct piles {
+	t_pile *a;
+	t_pile *b;
+}					piles;
 
 
 //fonction principal et main

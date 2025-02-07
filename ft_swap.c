@@ -6,13 +6,13 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:54:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/07 10:36:28 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/07 17:49:15 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
 //intervertit les 2 premiers elements au sommet de la pile a
-void	ft_swap_sa(pile **a)
+void	ft_swap_sa(t_pile **a)
 {
 	pile *tmp_a;
 
@@ -27,7 +27,7 @@ void	ft_swap_sa(pile **a)
 }
 
 //intervertit les 2 premiers elements au sommet de la pile b
-void	ft_swap_sb(pile *b) 
+void	ft_swap_sb(t_pile *b) 
 {
 	pile *tmp_b;
 
@@ -40,21 +40,10 @@ void	ft_swap_sb(pile *b)
 }
 
 //sa + sb
-void	ft_swap_ss(pile *a, pile *b)
+void	ft_swap_ss(t_pile *a, t_pile *b)
 {
-	pile	*tmp_a;
-	pile *tmp_b;
-	
-	if (a != NULL && a->next))
-	{
-		tmp_a = a->next;
-		a = a->next;
-		ft_lstaad_front(a, tmp_a);
-	}
-	if (b != NULL && b->next))
-	{
-		tmp_b = b->next;
-		b = b->next;
-		ft_lstaad_front(b, tmp_b);
-	}
+	ft_swap_sa(a);
+	ft_swap_sb(b);
 }
+
+

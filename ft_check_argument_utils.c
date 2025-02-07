@@ -6,13 +6,11 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 10:44:57 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/07 10:59:34 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/07 11:03:29 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // Cas ou l'useur met une serie d'argument dans "" permet la prise en compte.
-
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
