@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/06 15:55:37 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/07 10:34:48 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,9 @@ typedef struct pile {
 //int	main(int argc, char **argv)
 //int	push_swap()
 //fonction en lien avec la manipulation des liste chainees
-void	ft_lstaddfront(t_list *lst, t_list *new);
-
+void	ft_lstaddfront(t_pile *lst, t_pile *new);
+void	ft_lstaddback(t_pile **lst, t_pile *new)
+int	ft_lstsize(t_pile **lst);
 //check error arguments
 //void	ft_check_arguments(char *str);
 void	ft_check_only_num(char *str);
