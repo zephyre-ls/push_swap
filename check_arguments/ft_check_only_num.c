@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 16:20:19 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/12 16:20:43 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/12 17:11:14 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,7 @@ void	ft_check_only_num(char *str)
 	while (str[i] != '\0')
 	{
 		if (!(str[i] >= '0' && str[i] <= '9'))
-		{
-			write(1, "Error\n", 6);
-			return ;
-		}
+			error(str);
 		i++;
 	}
 }
