@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/12 11:52:10 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/12 17:05:29 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,50 @@
 # include <stdlib.h>
 # include <stdio.h>
 
-void ft_check_only_num(char *str);
-void ft_check_max_min_int(char *str);
-void ft_check_doublon(int argc, char **argv);
-char **ft_split(char const *s);
-int ft_isspace(char c);
-int ft_countmot(char const *s);
-char **ft_freemallocerror(char **bigtab);
-int ft_start(char const *s, int *i);
-char *ft_substr(char const *s, unsigned int start, size_t len);
+//implantation de la structure pour mes listes chainées
+typedef struct s_pile{
+	int	val; //stocke la valeur de noeud
+	struct	s_pile *next; //Pointeur vers le prochain noeud
+}	t_pile;
+
+typedef struct piles{
+	t_pile *a; //contient tous les arguments données au programme
+	t_pile *b; //vide sert a trier avec les deplacements
+} piles;
+
+//check_arguments
+void	ft_check_only_num(char *str);
+int	ft_check_sign(char *str, int *i);
+void	ft_check_max_min_int(char *str);
+void	ft_check_doublon(int argc, char **argv);
+//check_one_string_with_split
+char	**ft_split(char const *s);
+int		ft_isspace(char c);
+int		ft_countmot(char const *s);
+char	**ft_freemallocerror(char **bigtab);
+int		ft_start(char const *s, int *i);
+//check_arguments_utils
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+//error
+char	error(char *str);
+
+//ft_instructions
+void	ft_push_pa(t_pile **a, t_pile **b);
+void	ft_push_pb(t_pile **b, t_pile **a);
+void	ft_reverse_rotate_rra(t_pile **a);
+void	ft_reverse_rotate_rrb(t_pile **b);
+void	ft_reverse_rotate_rrr(t_pile **a, t_pile **b);
+void	ft_rotate_ra(t_pile **a);
+void	ft_rotate_rb(t_pile **b);
+void	ft_rotate_rr(t_pile **a, t_pile **b);
+void	ft_swap_sa(t_pile **a);
+void	ft_swap_sb(t_pile *b);
+void	ft_swap_ss(t_pile *a, t_pile *b);
+//utils_instructions
+void	ft_lstadd_front(t_pile **lst, piles *new);
+void	ft_lstadd_back(t_pile **lst, piles *new);
+int		ft_lstsize(t_pile **lst);
+piles	ft_lstlast(t_pile **lst);
+
 
 #endif

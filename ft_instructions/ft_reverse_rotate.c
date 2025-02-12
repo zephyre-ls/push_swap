@@ -6,11 +6,11 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:55:48 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/07 17:50:43 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/12 12:23:52 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 //https://miage.univ-nantes.fr/miage/DVD-MIAGEv2/Algo_files/DVDMIAGE_Algo_Chapitre_10_Listes.pdf
 //exemple pile_a : [2] [4] [1] NULL
 //		2		1

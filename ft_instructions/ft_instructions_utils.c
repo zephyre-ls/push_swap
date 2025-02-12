@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_manip.c                                    :+:      :+:    :+:   */
+/*   ft_instruction_utils.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduflot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 12:31:39 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/07 17:58:55 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/12 12:23:33 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 //ajoute new au debut de la list lst
 void	ft_lstadd_front(t_pile **lst, piles *new)

@@ -6,11 +6,11 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:56:23 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/07 17:48:56 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/12 12:23:59 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 //exemple pile_a : [2] [4] [1] NULL
 //
