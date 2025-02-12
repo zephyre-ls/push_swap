@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:38 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/07 17:24:30 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/11 19:19:33 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,8 @@ void	ft_check_arguments(char *str)
 		ft_check_doublon(*str);
 	}
 }
- void	push_swap(int nb);
+/* void	push_swap(int nb);
 {
 	pile_a : nb;
 	pile_b : NULL;
-
-
-}
-
-		
+*/	
