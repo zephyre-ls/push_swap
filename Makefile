@@ -6,7 +6,7 @@
 #    By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/30 15:34:26 by lduflot           #+#    #+#              #
-#    Updated: 2025/02/16 22:18:41 by lduflot          ###   ########.fr        #
+#    Updated: 2025/02/17 00:07:00 by lduflot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 
 CC = cc
 CFLAGS = -g -Wall -Wextra -Werror
-NAME = pushswap.a
+NAME = push_swap
 
 ###############################
 ##SOURCES
@@ -25,6 +25,7 @@ FILES =	check_arguments/ft_check_max_min_int.c \
 				check_arguments/ft_check_doublon.c \
 				check_arguments/ft_check_one_string.c \
 				check_arguments/ft_check_tri.c \
+				check_arguments/ft_check_arguments_utils.c \
 				check_arguments/error.c \
 				ft_instructions/ft_instructions_utils.c \
 				ft_instructions/ft_push.c \
@@ -48,7 +49,7 @@ OBJS = $(FILES:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.c push_swap.h
 	$(CC) $(CFLAGS) -c $< -o $@
