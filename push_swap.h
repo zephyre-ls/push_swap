@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/16 20:41:58 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/16 22:07:21 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	ft_check_only_num(char *str);
 int	ft_check_sign(char *str, int *i);
 void	ft_check_max_min_int(char *str);
 void	ft_check_doublon(int argc, char **argv);
+void	ft_check_tri(char **argv);
 //check_one_string_with_split
 char	**ft_split(char const *s);
 int		ft_isspace(char c);

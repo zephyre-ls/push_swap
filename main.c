@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:38:54 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/15 14:37:51 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/16 22:12:06 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int	main(int argc, char **argv)
 			ft_check_max_min_int(arg_split[i]);
 			i++;
 		}
+		ft_check_tri(arg_split);
 		ft_check_doublon(i, arg_split);
 		ft_freemallocerror(arg_split);
 		init_pile(&a, i, arg_split);
@@ -50,9 +51,11 @@ int	main(int argc, char **argv)
 		{
 			ft_check_only_num(argv[i]);
 			ft_check_max_min_int(argv[i]);
+			//ft_check_tri(argv);
 			i++;
 		}
 		ft_check_doublon(argc, argv);
+		ft_check_tri(argv);
 		init_pile(&a, argc, argv);
 	}
 	t_pile *tmp = a;
