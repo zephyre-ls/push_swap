@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:56:23 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/12 12:23:59 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/16 20:35:57 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,18 @@
 
 void	ft_rotate_ra(t_pile **a)
 {
-	pile	*tmp_a;
+	t_pile	*tmp_a;
 
 	tmp_a = *a; //recup 1er noeud tmp_a = [2]
 	*a = (*a)->next; //supp 1er noeud et passe au suivant a = [4]
 	tmp_a->next=NULL;
-	ft_lstadd_back(a, tmp_a); //remplace le dernier noeud par le premier 
+	ft_lstadd_back(a, tmp_a); //remplace le dernier noeud par le premier
 }
 
 void	ft_rotate_rb(t_pile **b)
 {
-	pile	*tmp_b;
-	t
+	t_pile	*tmp_b;
+	
 	tmp_b = *b;
 	*b = (*b)->next; //() permet de garder l'ordre des operations correcte, si abs = *a =*a->next cc *a=*(a->next)
 	tmp_b->next=NULL;
@@ -47,11 +47,11 @@ void	ft_rotate_rr(t_pile **a, t_pile **b)
 /*
 int main(void)
 {
-	pile *a = NULL;
+	piles *a = NULL;
 
 	// Création de la pile
-	pile *n1 = malloc(sizeof(pile));
-	pile *n2 = malloc(sizeof(pile));
+	piles *n1 = malloc(sizeof(pile));
+	piles *n2 = malloc(sizeof(pile));
 	pile *n3 = malloc(sizeof(pile));
 
 	if (!n1 || !n2 || !n3)

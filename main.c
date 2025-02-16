@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:38:54 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/12 16:19:10 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/15 14:37:51 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ int	main(int argc, char **argv)
 {
 	int	i = 1;
 	char	**arg_split;
+	//t_pile *new = NULL;
+	t_pile *a = NULL;
+	//:piles *b = NULL;
 
 	if (argc < 2)
 	{
@@ -38,7 +41,8 @@ int	main(int argc, char **argv)
 			i++;
 		}
 		ft_check_doublon(i, arg_split);
-		ft_freemallocerror(arg_split);  
+		ft_freemallocerror(arg_split);
+		init_pile(&a, i, arg_split);
 	}
 	else
 	{
@@ -49,6 +53,13 @@ int	main(int argc, char **argv)
 			i++;
 		}
 		ft_check_doublon(argc, argv);
+		init_pile(&a, argc, argv);
+	}
+	t_pile *tmp = a;
+	while (tmp != NULL)
+	{
+		printf("%d\n", tmp->val);
+		tmp = tmp->next;
 	}
 	return(0);
 }

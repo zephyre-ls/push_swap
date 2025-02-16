@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/12 17:05:29 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/16 20:41:58 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,18 @@
 # include <stdlib.h>
 # include <stdio.h>
 
-//implantation de la structure pour mes listes chainées
+//implantation de la structure pour mes listes chainées, cette structure represente un noeud individuel. Chaque noeud contient une valeur "val" qui pointe vers le suivant "next"; cette struct permet de creer une pile dynamique, qui peut changer de taille, chaque element stocké sous forme de node dans la memoire. 
 typedef struct s_pile{
 	int	val; //stocke la valeur de noeud
 	struct	s_pile *next; //Pointeur vers le prochain noeud
 }	t_pile;
 
+//cette structure représente les 2 piles principales manipulable dans le programme; a représente la pile de stockage ou les argc seront placés, la pile b "pile de travail" représente une pile tmp utilisé pendant l'algo de trie. Cette struct piles contient les pointeurs vers mes 2 piles. Chaque pile est une listé chainé composé de plusieurs noeuf (t_pile).
 typedef struct piles{
 	t_pile *a; //contient tous les arguments données au programme
 	t_pile *b; //vide sert a trier avec les deplacements
 } piles;
+
 
 //check_arguments
 void	ft_check_only_num(char *str);
@@ -42,25 +44,29 @@ int		ft_start(char const *s, int *i);
 //check_arguments_utils
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 //error
-char	error(char *str);
-
+char	error(void);
+//ft_initilisation_node
+//utils
+int	ft_atoi(const char *str);
+void	init_pile(t_pile **a, int argc, char **argv);
+void	*ft_lstadd_front(t_pile *lst, t_pile *new);
+void	ft_lstadd_back(t_pile **lst, t_pile *new);
+int		ft_lstsize(t_pile **lst);
+t_pile	*ft_lstlast(t_pile *lst);
+t_pile	*ft_lstnew(int val);
 //ft_instructions
-void	ft_push_pa(t_pile **a, t_pile **b);
-void	ft_push_pb(t_pile **b, t_pile **a);
-void	ft_reverse_rotate_rra(t_pile **a);
-void	ft_reverse_rotate_rrb(t_pile **b);
-void	ft_reverse_rotate_rrr(t_pile **a, t_pile **b);
+void	ft_push_pa(t_pile *a, t_pile *b);
+void	ft_push_pb(t_pile *b, t_pile *a);
+void	ft_reverse_rotate_rra(t_pile *a);
+void	ft_reverse_rotate_rrb(t_pile *b);
+void	ft_reverse_rotate_rrr(t_pile *a, t_pile *b);
 void	ft_rotate_ra(t_pile **a);
 void	ft_rotate_rb(t_pile **b);
 void	ft_rotate_rr(t_pile **a, t_pile **b);
-void	ft_swap_sa(t_pile **a);
-void	ft_swap_sb(t_pile *b);
-void	ft_swap_ss(t_pile *a, t_pile *b);
+void	*ft_swap_sa(t_pile *a);
+void	*ft_swap_sb(t_pile *b);
+void	*ft_swap_ss(t_pile *a, t_pile *b);
 //utils_instructions
-void	ft_lstadd_front(t_pile **lst, piles *new);
-void	ft_lstadd_back(t_pile **lst, piles *new);
-int		ft_lstsize(t_pile **lst);
-piles	ft_lstlast(t_pile **lst);
 
 
 #endif

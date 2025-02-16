@@ -6,7 +6,7 @@
 #    By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/30 15:34:26 by lduflot           #+#    #+#              #
-#    Updated: 2025/02/12 17:05:09 by lduflot          ###   ########.fr        #
+#    Updated: 2025/02/15 10:46:05 by lduflot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,13 +24,13 @@ FILES =	check_arguments/ft_check_max_min_int.c \
 				check_arguments/ft_check_only_num.c \
 				check_arguments/ft_check_doublon.c \
 				check_arguments/ft_check_one_string.c \
-				check_arguments/ft_check_arguments_utils.c \
 				check_arguments/error.c \
 				ft_instructions/ft_instructions_utils.c \
 				ft_instructions/ft_push.c \
 				ft_instructions/ft_reverse_rotate.c \
 				ft_instructions/ft_rotate.c \
 				ft_instructions/ft_swap.c \
+				ft_initialisation_node/ft_initialisation_node_utils.c \
 				main.c
 		#ft_push.c \
 				ft_reverse_rotate.c \
