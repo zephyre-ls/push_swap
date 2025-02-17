@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:03:12 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/15 10:11:09 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/17 17:50:17 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 char	error(void)
 {
 	write(1, "Error\n", 6);
-	return (0);
+	exit (EXIT_FAILURE);
 }

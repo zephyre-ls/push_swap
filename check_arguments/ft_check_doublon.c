@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 18:06:03 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/12 12:18:47 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/17 17:49:34 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_check_doublon(int argc, char **argv)
 			if (argv[i][k] == '\0' && argv[j][k] == '\0' && k > 0)
 			{
 				write(1, "Error\n", 6);
-				return ;
+				exit(EXIT_FAILURE) ;
 			}
 			j++;
 		}

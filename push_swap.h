@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/16 22:07:21 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/17 17:17:54 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char	error(void);
 int	ft_atoi(const char *str);
 void	init_pile(t_pile **a, int argc, char **argv);
 void	*ft_lstadd_front(t_pile *lst, t_pile *new);
+void	freepile(t_pile *a);
 void	ft_lstadd_back(t_pile **lst, t_pile *new);
 int		ft_lstsize(t_pile **lst);
 t_pile	*ft_lstlast(t_pile *lst);

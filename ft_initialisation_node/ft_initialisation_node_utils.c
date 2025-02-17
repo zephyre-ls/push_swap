@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 09:55:32 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/16 20:45:51 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/17 17:42:15 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,11 @@ t_pile	*ft_lstnew(int val)
 	t_pile	*new;
 
 	new = (malloc(sizeof(t_pile)));
-	if (new == NULL)
+	if(new == NULL)
+	{
+		free(new);
 		return (NULL);
+	}
 	new->val = val;
 	new->next = NULL;
 	return (new);
@@ -102,19 +105,5 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-void	init_pile(t_pile **a, int argc, char **argv)
-{
-	int	i;
-	int	val;
-	t_pile *new_node;
 
-	i = 1; //evite le nom du programme
-	while (i < argc)
-	{
-		val = ft_atoi(argv[i]);
-		new_node = ft_lstnew(val);
-		ft_lstadd_front(*a, new_node);
-		i++;
-	}
-}
 

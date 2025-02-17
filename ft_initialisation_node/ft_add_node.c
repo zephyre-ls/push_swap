@@ -1,31 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_tri.c                                     :+:      :+:    :+:   */
+/*   ft_add_node.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/16 21:15:00 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/17 17:51:02 by lduflot          ###   ########.fr       */
+/*   Created: 2025/02/17 17:04:16 by lduflot           #+#    #+#             */
+/*   Updated: 2025/02/17 17:38:10 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_check_tri(char **argv)
+void	init_pile(t_pile **a, int argc, char **argv)
 {
 	int	i;
-	int	previous;
-	int	next;
- 
-	i = 1;
-	while(argv[i + 1])
+	int	val;
+	t_pile *new_node;
+
+	i = 1; //evite le nom du programme
+	while (i < argc)
 	{
-		previous = ft_atoi(argv[i]);
-		next = ft_atoi(argv[i + 1]);
-		if(previous > next)
-			return;
+		val = ft_atoi(argv[i]);
+		new_node = ft_lstnew(val);
+		if(new_node == NULL)
+		{
+			freepile(*a);
+			return ;
+		}
+		ft_lstadd_front(*a, new_node);
 		i++;
 	}
-	exit(EXIT_FAILURE);
+	printf("init_pile appele\n");
+}
+
+void	freepile(t_pile *a)
+{
+	t_pile *tmp;
+
+	while(a)
+	{
+		tmp = a;
+		a = a->next;
+		free(tmp);
+	}
 }
