@@ -6,7 +6,7 @@
 #    By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/30 15:34:26 by lduflot           #+#    #+#              #
-#    Updated: 2025/02/19 16:45:57 by lduflot          ###   ########.fr        #
+#    Updated: 2025/02/19 21:42:04 by lduflot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,15 +45,18 @@ OBJS = $(FILES:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@echo "Compile $(NAME) bb ..."
+	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.c push_swap.h
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	@echo "Mr.Larbin nettoie..."
+	@rm -f $(OBJS)
 fclean: clean
-	rm -f $(NAME)
+	@echo "Mr.Larbin nettoie encore plus..."
+	@rm -f $(NAME)
 
 re: fclean all
 

@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:56:23 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/16 20:35:57 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/19 20:35:58 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,42 +44,3 @@ void	ft_rotate_rr(t_pile **a, t_pile **b)
 	ft_rotate_ra(a);
 	ft_rotate_rb(b);
 }
-/*
-int main(void)
-{
-	piles *a = NULL;
-
-	// Création de la pile
-	piles *n1 = malloc(sizeof(pile));
-	piles *n2 = malloc(sizeof(pile));
-	pile *n3 = malloc(sizeof(pile));
-
-	if (!n1 || !n2 || !n3)
-		return (1);
-
-	n1->value = 2;
-	n2->value = 4;
-	n3->value = 1;
-	n1->next = n2;
-	n2->next = n3;
-	n3->next = NULL;
-	a = n1;
-
-	// Affichage avant rotation
-	printf("Avant rotation:\n");
-	print_pile(a);
-
-	// Effectuer la rotation
-	ft_rotate_ra(&a);
-
-	// Affichage après rotation
-	printf("Après rotation:\n");
-	print_pile(a);
-
-	// Libération de la mémoire
-	free(n1);
-	free(n2);
-	free(n3);
-
-	return (0);
-}*/

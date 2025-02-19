@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:54:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/19 18:29:10 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/19 20:51:26 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	ft_swap_sa(t_pile **a)
 		ft_lstadd_front(a, tmp_a);
 	}
 }
-
 //intervertit les 2 premiers elements au sommet de la pile b
 void	ft_swap_sb(t_pile **b) 
 {
@@ -39,7 +38,6 @@ void	ft_swap_sb(t_pile **b)
 		ft_lstadd_front(b, tmp_b);
 	}
 }
-
 //sa + sb
 void	ft_swap_ss(t_pile **a, t_pile **b)
 {

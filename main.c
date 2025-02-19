@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:38:54 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/19 18:39:27 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/19 20:10:42 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,28 +52,31 @@ int	main(int argc, char **argv)
 // Affichage de la pile A après l'initialisation
 	printf("Pile A après initialisation :\n");
 	print_pile(a);
+	printf("Pile B apres initialisation : \n");
 	print_pile(b);
 
 	// TEST DES FONCTIONS
-	printf("\n--- Test pb (push b) ---\n");
+	printf("\n push b \n");
 	ft_push_pb(&b, &a);
 	print_pile(a);
+	printf("\n pile b apres push \n");
 	print_pile(b);
 
-	printf("\n--- Test pa (push a) ---\n");
+	printf("\n push b \n");
 	ft_push_pa(&a, &b);
 	print_pile(a);
+	printf("\n pile b apres push \n");
 	print_pile(b);
 
-	//printf("\n--- Test sa (swap a) ---\n");
-	//ft_swap_sa(a);
-	//print_pile(a);
+	printf("\n swap a \n");
+	//ft_swap_sa(&a);
+	print_pile(a);
 
-	printf("\n--- Test ra (rotate a) ---\n");
+	printf("\n rotate a \n");
 	ft_rotate_ra(&a);
 	print_pile(a);
 
-	printf("\n--- Test rra (reverse rotate a) ---\n");
+	printf("\n reverse rotate a \n");
 	ft_reverse_rotate_rra(&a);
 	print_pile(a);
 

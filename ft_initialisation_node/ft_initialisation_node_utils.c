@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 09:55:32 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/19 18:13:24 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/19 20:41:03 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,30 +80,13 @@ t_pile	*ft_lstlast(t_pile *lst)
 	return (NULL);
 }
 
-int	ft_atoi(const char *str)
+void	print_pile(t_pile *a)
 {
-	int	i;
-	int	result;
-	int	sign;
-
-	i = 0;
-	result = 0;
-	sign = 1;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while(a)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		printf("%d -> ", a->val);
+		a = a->next;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - '0');
-		i++;
-	}
-	return (result * sign);
+	printf("\n");
 }
-
-
 
