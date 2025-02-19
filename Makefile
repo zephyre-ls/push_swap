@@ -6,7 +6,7 @@
 #    By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/30 15:34:26 by lduflot           #+#    #+#              #
-#    Updated: 2025/02/17 17:17:27 by lduflot          ###   ########.fr        #
+#    Updated: 2025/02/19 16:45:57 by lduflot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,13 +34,8 @@ FILES =	check_arguments/ft_check_max_min_int.c \
 				ft_instructions/ft_swap.c \
 				ft_initialisation_node/ft_initialisation_node_utils.c \
 				ft_initialisation_node/ft_add_node.c \
+				push_swap.c \
 				main.c
-		#ft_push.c \
-				ft_reverse_rotate.c \
-				ft_rotate.c \
-				ft_swap.c \
-				ft_list_manip.c \
-				push_swap.c
 
 OBJS = $(FILES:.c=.o)
 

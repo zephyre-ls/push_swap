@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/17 17:17:54 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/19 18:28:44 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,25 +50,28 @@ char	error(void);
 //utils
 int	ft_atoi(const char *str);
 void	init_pile(t_pile **a, int argc, char **argv);
-void	*ft_lstadd_front(t_pile *lst, t_pile *new);
+void	*ft_lstadd_front(t_pile **lst, t_pile *new);
 void	freepile(t_pile *a);
 void	ft_lstadd_back(t_pile **lst, t_pile *new);
 int		ft_lstsize(t_pile **lst);
 t_pile	*ft_lstlast(t_pile *lst);
 t_pile	*ft_lstnew(int val);
 //ft_instructions
-void	ft_push_pa(t_pile *a, t_pile *b);
-void	ft_push_pb(t_pile *b, t_pile *a);
-void	ft_reverse_rotate_rra(t_pile *a);
-void	ft_reverse_rotate_rrb(t_pile *b);
-void	ft_reverse_rotate_rrr(t_pile *a, t_pile *b);
+void	ft_push_pa(t_pile **a, t_pile **b);
+void	ft_push_pb(t_pile **b, t_pile **a);
+void	ft_reverse_rotate_rra(t_pile **a);
+void	ft_reverse_rotate_rrb(t_pile **b);
+void	ft_reverse_rotate_rrr(t_pile **a, t_pile **b);
 void	ft_rotate_ra(t_pile **a);
 void	ft_rotate_rb(t_pile **b);
 void	ft_rotate_rr(t_pile **a, t_pile **b);
-void	*ft_swap_sa(t_pile *a);
-void	*ft_swap_sb(t_pile *b);
-void	*ft_swap_ss(t_pile *a, t_pile *b);
+void	ft_swap_sa(t_pile **a);
+void	ft_swap_sb(t_pile **b);
+void	ft_swap_ss(t_pile **a, t_pile **b);
 //utils_instructions
-
+//push_swap.c
+void	*ft_mouvement(t_pile *a, t_pile *b);
+void	print_pile(t_pile *a);
+t_pile	*ft_lstbefore_last(t_pile *lst);
 
 #endif

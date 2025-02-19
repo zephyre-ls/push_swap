@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:38:54 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/17 17:38:47 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/19 18:39:27 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,16 @@ int	main(int argc, char **argv)
 {
 	int	i = 1;
 	char	**arg_split;
-	//t_pile *new = NULL;
 	t_pile *a = NULL;
-	//:piles *b = NULL;
+	t_pile *b = NULL;
 
 	if (argc < 2)
-	{
-		write(1, "Error\n", 6);
-		return (0);
-	}
+		error();
 	if (argc == 2)
 	{
 		arg_split = ft_split(argv[1]);
 		if (arg_split == NULL || arg_split[0] == NULL || arg_split[1] == NULL)
-		{
-			write(1, "Error\n", 6);
-			return(0);
-		}
+			error();
 		i = 0;
 		while (arg_split[i])
 		{
@@ -42,7 +35,6 @@ int	main(int argc, char **argv)
 		}
 		ft_check_doublon(i, arg_split);
 		ft_check_tri(arg_split);
-	//	ft_freemallocerror(arg_split);
 		init_pile(&a, i, arg_split);
 	}
 	else
@@ -51,18 +43,43 @@ int	main(int argc, char **argv)
 		{
 			ft_check_only_num(argv[i]);
 			ft_check_max_min_int(argv[i]);
-			//ft_check_tri(argv);
 			i++;
 		}
 		ft_check_tri(argv);
 		ft_check_doublon(argc, argv);
 		init_pile(&a, argc, argv);
 	}
-	t_pile *tmp = a;
-	while (tmp != NULL)
-	{
-		printf("%d\n", tmp->val);
-		tmp = tmp->next;
-	}
-	return(0);
+// Affichage de la pile A après l'initialisation
+	printf("Pile A après initialisation :\n");
+	print_pile(a);
+	print_pile(b);
+
+	// TEST DES FONCTIONS
+	printf("\n--- Test pb (push b) ---\n");
+	ft_push_pb(&b, &a);
+	print_pile(a);
+	print_pile(b);
+
+	printf("\n--- Test pa (push a) ---\n");
+	ft_push_pa(&a, &b);
+	print_pile(a);
+	print_pile(b);
+
+	//printf("\n--- Test sa (swap a) ---\n");
+	//ft_swap_sa(a);
+	//print_pile(a);
+
+	printf("\n--- Test ra (rotate a) ---\n");
+	ft_rotate_ra(&a);
+	print_pile(a);
+
+	printf("\n--- Test rra (reverse rotate a) ---\n");
+	ft_reverse_rotate_rra(&a);
+	print_pile(a);
+
+	// Libération de la mémoire
+	freepile(a);
+	freepile(b);
+
+	return (0);
 }

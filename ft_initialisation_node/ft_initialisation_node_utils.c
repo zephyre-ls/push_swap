@@ -6,17 +6,17 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 09:55:32 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/17 17:42:15 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/19 18:13:24 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 //ajoute new debut lst
-void	*ft_lstadd_front(t_pile *lst, t_pile *new)
+void	*ft_lstadd_front(t_pile **lst, t_pile *new)
 {
-	new ->next = lst;
-	lst = new;
+	new ->next = *lst;
+	*lst = new;
 	return(NULL);
 }
 //ajoute new fin lst

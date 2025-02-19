@@ -6,14 +6,19 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:38 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/14 17:51:09 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/19 17:15:15 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*void	*ft_mouvement(t_pile *a, t_pile *b)
+{
+	ft_push_pa(a, b);
+
+}
 //verifie que les arguments sont recevables.
-/*void	ft_check_arguments(char *str)
+void	ft_check_arguments(char *str)
 {
 	while(str)
 	{
