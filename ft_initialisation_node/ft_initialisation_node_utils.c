@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 09:55:32 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/19 20:41:03 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/21 10:03:38 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,43 +17,46 @@ void	*ft_lstadd_front(t_pile **lst, t_pile *new)
 {
 	new ->next = *lst;
 	*lst = new;
-	return(NULL);
+	return (NULL);
 }
 //ajoute new fin lst
+
 void	ft_lstadd_back(t_pile **lst, t_pile *new)
 {
-	t_pile *tmp;
+	t_pile	*tmp;
 
 	tmp = *lst;
-	if(*lst == NULL)
+	if (*lst == NULL)
 	{
 		*lst = new;
-		return;
+		return ;
 	}
-	while(tmp->next && tmp != NULL)
+	while (tmp->next && tmp != NULL)
 		tmp = tmp->next;
 	tmp->next = new;
 }
+
 //taille de la liste
 int	ft_lstsize(t_pile **lst)
 {
 	int	i;
 
 	i = 0;
-	while(*lst != NULL)
+	while (*lst != NULL)
 	{
 		(*lst) = (*lst)->next;
 		i++;
 	}
-	return(i);
+	return (i);
 }
+
 //ajout un new noeud
 t_pile	*ft_lstnew(int val)
 {
 	t_pile	*new;
 
 	new = (malloc(sizeof(t_pile)));
-	if(new == NULL)
+	if (new == NULL)
 	{
 		free(new);
 		return (NULL);
@@ -62,31 +65,31 @@ t_pile	*ft_lstnew(int val)
 	new->next = NULL;
 	return (new);
 }
+
 //affiche le dernier noeud de la liste avant NULL
 t_pile	*ft_lstlast(t_pile *lst)
 {
 	int	i;
 
 	i = 0;
-	if(lst != NULL)
+	if (lst != NULL)
 	{
-		while(lst->next != NULL)
+		while (lst->next != NULL)
 		{
 			lst = lst->next;
 			i++;
 		}
-		return(lst);
+		return (lst);
 	}
 	return (NULL);
 }
 
 void	print_pile(t_pile *a)
 {
-	while(a)
+	while (a)
 	{
 		printf("%d -> ", a->val);
 		a = a->next;
 	}
 	printf("\n");
 }
-

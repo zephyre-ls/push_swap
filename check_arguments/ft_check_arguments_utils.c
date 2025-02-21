@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 10:44:57 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/19 20:38:18 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/21 10:04:34 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*dest;
-  
+
 	dest = malloc(sizeof(char) * (len + 1));
 	if (dest == NULL)
 		return (NULL);
@@ -54,6 +54,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-
-

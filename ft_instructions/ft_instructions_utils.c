@@ -6,7 +6,7 @@
 /*   By: lduflot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 12:31:39 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/19 20:41:22 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/21 10:02:12 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,3 @@ t_pile	*ft_lstbefore_last(t_pile *lst)
 		lst = lst->next;
 	return (lst);
 }
-

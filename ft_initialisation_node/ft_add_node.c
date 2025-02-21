@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 17:04:16 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/21 08:39:06 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/21 09:59:41 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	init_pile(t_pile **a, int i, char **argv)
 {
-	int	val;
-	t_pile *new_node;
+	int		val;
+	t_pile	*new_node;
 
 	while (argv[i])
 	{
 		val = ft_atoi(argv[i]);
 		new_node = ft_lstnew(val);
-		if(new_node == NULL)
+		if (new_node == NULL)
 		{
-			freepile(*a);
+			freepile (*a);
 			return ;
 		}
 		ft_lstadd_front(a, new_node);
@@ -33,9 +33,9 @@ void	init_pile(t_pile **a, int i, char **argv)
 
 void	freepile(t_pile *a)
 {
-	t_pile *tmp;
+	t_pile	*tmp;
 
-	while(a)
+	while (a)
 	{
 		tmp = a;
 		a = a->next;
