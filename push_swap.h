@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/19 18:28:44 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/21 17:05:27 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,12 @@ typedef struct s_pile{
 
 //cette structure représente les 2 piles principales manipulable dans le programme; a représente la pile de stockage ou les argc seront placés, la pile b "pile de travail" représente une pile tmp utilisé pendant l'algo de trie. Cette struct piles contient les pointeurs vers mes 2 piles. Chaque pile est une listé chainé composé de plusieurs noeuf (t_pile).
 typedef struct piles{
-	t_pile *a; //contient tous les arguments données au programme
-	t_pile *b; //vide sert a trier avec les deplacements
-} piles;
-
-
+ t_pile *a; //contient tous les arguments données au programme
+ t_pile *b; //vide sert a trier avec les deplacements
+} 						piles;
 //check_arguments
 void	ft_check_only_num(char *str);
-int	ft_check_sign(char *str, int *i);
+int		ft_check_sign(char *str, int *i);
 void	ft_check_max_min_int(char *str);
 void	ft_check_doublon(int argc, char **argv);
 void	ft_check_tri(char **argv);
@@ -48,7 +46,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	error(void);
 //ft_initilisation_node
 //utils
-int	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 void	init_pile(t_pile **a, int argc, char **argv);
 void	*ft_lstadd_front(t_pile **lst, t_pile *new);
 void	freepile(t_pile *a);

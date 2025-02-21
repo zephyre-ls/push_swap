@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:38:54 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/21 09:58:31 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/21 17:03:38 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ int	main(int argc, char **argv)
 		i = 1;
 		init_pile(&a, i, argv);
 	}
-
 	printf("Pile A après initialisation :\n");
 	print_pile(a);
 	printf("Pile B apres initialisation : \n");
@@ -78,9 +77,7 @@ int	main(int argc, char **argv)
 	printf("\n reverse rotate a \n");
 	ft_reverse_rotate_rra(&a);
 	print_pile(a);
-
 	freepile(a);
 	freepile(b);
-
 	return (0);
 }
