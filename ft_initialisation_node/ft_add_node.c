@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 17:04:16 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/21 09:59:41 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/21 10:34:56 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	init_pile(t_pile **a, int i, char **argv)
 			freepile (*a);
 			return ;
 		}
-		ft_lstadd_front(a, new_node);
+		ft_lstadd_back(a, new_node);
 		i++;
 	}
 }

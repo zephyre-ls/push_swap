@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 21:15:00 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/21 10:05:06 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/21 11:51:46 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_check_tri(char **argv)
 	int	previous;
 	int	next;
 
-	i = 1;
+	i = 0;
 	while (argv[i + 1])
 	{
 		previous = ft_atoi(argv[i]);
