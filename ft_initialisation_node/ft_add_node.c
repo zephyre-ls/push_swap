@@ -6,20 +6,18 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 17:04:16 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/19 20:54:22 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/21 08:39:06 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	init_pile(t_pile **a, int argc, char **argv)
+void	init_pile(t_pile **a, int i, char **argv)
 {
-	int	i;
 	int	val;
 	t_pile *new_node;
 
-	i = 1; //evite le nom du programme
-	while (i < argc)
+	while (argv[i])
 	{
 		val = ft_atoi(argv[i]);
 		new_node = ft_lstnew(val);

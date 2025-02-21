@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:38:54 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/19 20:10:42 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/21 08:40:58 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int	main(int argc, char **argv)
 		}
 		ft_check_doublon(i, arg_split);
 		ft_check_tri(arg_split);
+		i = 0;
 		init_pile(&a, i, arg_split);
 	}
 	else
@@ -47,7 +48,8 @@ int	main(int argc, char **argv)
 		}
 		ft_check_tri(argv);
 		ft_check_doublon(argc, argv);
-		init_pile(&a, argc, argv);
+		i = 1;
+		init_pile(&a, i, argv);
 	}
 // Affichage de la pile A après l'initialisation
 	printf("Pile A après initialisation :\n");
@@ -69,7 +71,7 @@ int	main(int argc, char **argv)
 	print_pile(b);
 
 	printf("\n swap a \n");
-	//ft_swap_sa(&a);
+	ft_swap_sa(&a);
 	print_pile(a);
 
 	printf("\n rotate a \n");
