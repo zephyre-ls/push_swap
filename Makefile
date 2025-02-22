@@ -6,7 +6,7 @@
 #    By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/30 15:34:26 by lduflot           #+#    #+#              #
-#    Updated: 2025/02/21 17:31:44 by lduflot          ###   ########.fr        #
+#    Updated: 2025/02/22 08:31:32 by lduflot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ FILES =	check_arguments/ft_check_max_min_int.c \
 				ft_instructions/ft_swap.c \
 				ft_initialisation_node/ft_initialisation_node_utils.c \
 				ft_initialisation_node/ft_add_node.c \
+				algo/mediane.c \
 				push_swap.c \
 				main.c
 

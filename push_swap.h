@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/21 17:05:27 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/22 08:56:51 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,8 @@ void	ft_swap_ss(t_pile **a, t_pile **b);
 void	*ft_mouvement(t_pile *a, t_pile *b);
 void	print_pile(t_pile *a);
 t_pile	*ft_lstbefore_last(t_pile *lst);
+//ALGO
+//mediane
+void	mediane(t_pile *a);
 
 #endif
