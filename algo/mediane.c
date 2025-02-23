@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:13:20 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/22 09:22:27 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/23 09:31:11 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "../push_swap.h"
 
-void	mediane(t_pile *a)
+int	mediane(t_pile *a)
 {
 	t_pile	*tmp;
 	t_pile	*tmp_little;
@@ -38,4 +38,5 @@ void	mediane(t_pile *a)
 	tmp_pivot = tmp_pivot / 2;
 	tmp_pivot = (tmp_pivot + tmp_little->val);
 	printf("le pivot est: %d\n", tmp_pivot);
+	return(tmp_pivot);
 }

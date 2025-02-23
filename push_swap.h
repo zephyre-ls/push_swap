@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/22 08:56:51 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/23 09:42:41 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void	print_pile(t_pile *a);
 t_pile	*ft_lstbefore_last(t_pile *lst);
 //ALGO
 //mediane
-void	mediane(t_pile *a);
+int	mediane(t_pile *a);
+void	comparaison_pivot_1(t_pile **a, t_pile **b);
 
 #endif
