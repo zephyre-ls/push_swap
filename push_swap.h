@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/23 18:06:19 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/23 19:25:33 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	init_pile(t_pile **a, int argc, char **argv);
 void	*ft_lstadd_front(t_pile **lst, t_pile *new);
 void	freepile(t_pile *a);
 void	ft_lstadd_back(t_pile **lst, t_pile *new);
-int		ft_lstsize(t_pile **lst);
+int		ft_lstsize(t_pile *lst);
 t_pile	*ft_lstlast(t_pile *lst);
 t_pile	*ft_lstnew(int val);
 //ft_instructions
@@ -74,10 +74,9 @@ t_pile	*ft_lstbefore_last(t_pile *lst);
 //ALGO
 //mediane
 int	mediane(t_pile *a);
-void	comparaison_pivot_1(t_pile **a, t_pile **b);
 void	move_max_top_a(t_pile **a, int pos);
 int	position_max_sup_pivot(t_pile *a, int pivot);
-void	diviser_pour_mieux_regner(t_pile **a, t_pile **b, int pivot);
+void	diviser_pour_mieux_regner(t_pile **a, t_pile **b);
 void	transfer_max_b(t_pile **a, t_pile **b, int pivot);
 void	decroissant_b(t_pile **b);
 #endif

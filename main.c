@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:38:54 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/23 17:44:21 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/23 19:17:45 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	main(int argc, char **argv)
 	printf("Utilisation de mediane : \n");
 	mediane(a);
 	printf("Utilisation comparaison avec mediane : _n");
-	comparaison_pivot_1(&a, &b);
+	diviser_pour_mieux_regner(&a, &b);
 	printf("Pile a: \n");
 	print_pile(a);
 	printf("Pile b: \n");
