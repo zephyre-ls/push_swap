@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/23 11:55:56 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/23 12:00:41 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,10 @@ void	diviser_pour_mieux_regner(t_pile **a, t_pile **b, int pivot))
 // on parcourt la liste 
 // quand le plus grand est trouvé on fait les diverses instructions pour le passer au dessus de la liste et push_b
 // et on fait ca jusqu'a que tmp_b = NULL.
+//mince pas possible de faire ca car je crée une nouvelle liste
+// on regarde >= pivot
+// on cherche la position de la valeur la plus haute
+// on fait les instructions pour la mettre en haut de a 
+// on push sur b 
+// et ainsi de suite .........;
 }
