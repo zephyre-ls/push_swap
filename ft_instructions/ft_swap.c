@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:54:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/21 10:01:45 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/24 10:41:25 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ void	ft_swap_sa(t_pile **a)
 		tmp_a->next = *a;
 		*a = tmp_a;
 	}
+	write(1, "sa", 2);
+	write(1, "\n", 1);
 }
 
 //intervertit les 2 premiers elements au sommet de la pile b
@@ -43,6 +45,8 @@ void	ft_swap_sb(t_pile **b)
 		tmp_b->next = *b;
 		*b = tmp_b;
 	}
+	write(1, "sb", 2);
+	write(1, "\n", 1);
 }
 
 //sa + sb
@@ -50,4 +54,6 @@ void	ft_swap_ss(t_pile **a, t_pile **b)
 {
 	ft_swap_sa(a);
 	ft_swap_sb(b);
+	write(1, "ss", 2);
+	write(1, "\n", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:38:54 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/24 09:28:04 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/24 14:17:28 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	main(int argc, char **argv)
 		i = 1;
 		init_pile(&a, i, argv);
 	}
-	printf("Pile A après initialisation :\n");
+/*	printf("Pile A après initialisation :\n");
 	print_pile(a);
 	printf("Pile B apres initialisation : \n");
 	print_pile(b);
@@ -65,11 +65,12 @@ int	main(int argc, char **argv)
 	printf("Pile a: \n");
 	print_pile(a);
 	printf("Pile b: \n");
-	print_pile(b);
+	print_pile(b); */
 	quick_sort(&a, &b);
-	printf("Algo complet:\n");
-	print_pile(a);
-	print_pile(b);
+//	printf("Algo complet:\n");
+//	print_pile(a);
+//	print_pile(b);
+
 
 	/*printf("\n push b \n");
 	ft_push_pb(&b, &a);
