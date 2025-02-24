@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/23 19:29:03 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/24 09:30:49 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,11 @@ void	move_max_top_a(t_pile **a, int pos)
 	}
 }
 //trouver le pivot avec mediane
-/*void	comparaison_pivot_1(t_pile **a, t_pile **b)
+void	comparaison_pivot_1(t_pile **a, t_pile **b)
 {
 	int	pivot = mediane(*a);
 	diviser_pour_mieux_regner(a, b, pivot);
-}*/
+}
 
 //transfére l'élement ci_dessus sur la pile b
 void	transfer_max_b(t_pile **a, t_pile **b, int pivot)
@@ -71,10 +71,14 @@ void	transfer_max_b(t_pile **a, t_pile **b, int pivot)
 		return ;
 	move_max_top_a(a, pos_max);
 	ft_push_pb(b ,a);
+	    // Si b contient plus d'un élément et que le nouveau est plus petit
+    if (*b && (*b)->next && (*b)->val < (*b)->next->val)
+        ft_rotate_rb(b);
+//	decroissant_b(b);
 }
 
 //reorganisation de b par ordre decroissant
-void	decroissant_b(t_pile **b)
+/*void	decroissant_b(t_pile **b)
 {
 	int	len_b = ft_lstsize(*b);
 	while(len_b > 1)
@@ -82,16 +86,14 @@ void	decroissant_b(t_pile **b)
 		ft_rotate_rb(b);
 		len_b--;
 	}
-}
+}*/
 
 //separe les elements >= pivot
-void	diviser_pour_mieux_regner(t_pile **a, t_pile **b)
+void	diviser_pour_mieux_regner(t_pile **a, t_pile **b, int pivot)
 {
-	int	pivot = mediane(*a);
-
 	while(position_max_sup_pivot(*a, pivot) != -1)
 		transfer_max_b(a, b, pivot);
-	decroissant_b(b);
+	//decroissant_b(b);
 }
 
 

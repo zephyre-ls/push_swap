@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/23 19:25:33 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/24 09:26:16 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,11 @@ t_pile	*ft_lstbefore_last(t_pile *lst);
 //ALGO
 //mediane
 int	mediane(t_pile *a);
+void	comparaison_pivot_1(t_pile **a, t_pile **b);
 void	move_max_top_a(t_pile **a, int pos);
 int	position_max_sup_pivot(t_pile *a, int pivot);
-void	diviser_pour_mieux_regner(t_pile **a, t_pile **b);
+void	diviser_pour_mieux_regner(t_pile **a, t_pile **b, int pivot);
 void	transfer_max_b(t_pile **a, t_pile **b, int pivot);
 void	decroissant_b(t_pile **b);
+void    quick_sort(t_pile **a, t_pile **b);
 #endif

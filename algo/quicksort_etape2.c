@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:11:58 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/23 18:14:18 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/24 09:34:43 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,21 @@
 // Aprés cela on repush tout b dans a 
 // ET VOILA CST TRIE
 // Aprés reste l'affichage des instructions et voir le nbr de coup si c'est ok ok. 
+//
+void    quick_sort(t_pile **a, t_pile **b)
+{
+    int size_a;
+    
+    while ((size_a = ft_lstsize(*a)) > 1)
+    {
+        comparaison_pivot_1(a, b);
+        print_pile(*a);
+				print_pile(*b);
+    }
+    
+    // Une fois qu'il ne reste qu'un élément dans A, on push B vers A
+    while (*b)
+        ft_push_pa(a, b);
+		ft_reverse_rotate_rra(a);
+		
+}

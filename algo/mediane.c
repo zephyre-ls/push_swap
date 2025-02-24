@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:13:20 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/23 09:31:11 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/23 19:31:01 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ int	mediane(t_pile *a)
 	tmp_pivot = (tmp_big->val - tmp_little->val);
 	tmp_pivot = tmp_pivot / 2;
 	tmp_pivot = (tmp_pivot + tmp_little->val);
-	printf("le pivot est: %d\n", tmp_pivot);
-	return(tmp_pivot);
+	printf ("le pivot est: %d\n", tmp_pivot);
+	return (tmp_pivot);
 }
