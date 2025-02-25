@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:13:20 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/25 13:31:39 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/25 15:38:31 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ int	mediane(t_pile *a)
 {
 	t_pile	*tmp;
 	t_pile	*tmp_little;
+	t_pile	*tmp_second_little;
 	t_pile	*tmp_big;
+	t_pile	*tmp_second_big;
 	int		tmp_pivot;
 //	int	index_croissant;
 
@@ -44,15 +46,31 @@ int	mediane(t_pile *a)
 	}*/
 	tmp = a;
 	tmp_little = a;
+	tmp_second_little = a;
 	tmp_big = a;
+	tmp_second_big = a;
 	while (tmp)
 	{
+    if (tmp->val < tmp_little->val)
+    {
+			tmp_second_little = tmp_little;
+      tmp_little = tmp;
+		}
+    else if (tmp->val < tmp_second_little->val && tmp->val != tmp_little->val)
+    {
+			tmp_second_little = tmp;
+		}
 		if (tmp->val > tmp_big->val)
+    {
+			tmp_second_big = tmp_big;
 			tmp_big = tmp;
-		else if (tmp->val < tmp_little->val)
-			tmp_little = tmp;
-		tmp = tmp->next;
-	//	printf("tmp_big: %d, tmp_little: %d\n", tmp_big->val, tmp_little->val);
+    }
+		else if (tmp->val > tmp_second_big->val && tmp->val != tmp_big->val)
+    {
+			tmp_second_big = tmp;
+    }
+       tmp = tmp->next;
+	//printf("tmp_big: %d, tmp_little: %d\n", tmp_second_big->val, tmp_second_little->val);
 	}
 	tmp_pivot = (tmp_big->val - tmp_little->val);
 	tmp_pivot = tmp_pivot / 2;

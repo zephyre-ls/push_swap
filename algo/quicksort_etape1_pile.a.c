@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/25 14:51:12 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/25 15:17:31 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,46 +45,31 @@ int	position_max_sup_pivot(t_pile *a, int pivot)
 }
 
 //deplacer element trouvé si_dessus en haut de la pile A 
-void	move_max_top_a(t_pile **a, t_pile **b, int pos)
+void	move_max_top_a(t_pile **a, int pos)
 {
 	if (pos == -1)
 		return ;
 	int size_a = ft_lstsize(*a);
-	if (pos > size_a / 2)
+	int mid = size_a/2;
+
+	if (pos <= mid)
 	{
-		while (pos < size_a)
-		{
-			ft_reverse_rotate_rra(a);
-			pos++;
-		}
-	}
-	else
-	{
-		while(pos > 0)
+		while (pos > 0)
 		{
 			ft_rotate_ra(a);
 			pos--;
 		}
 	}
-	/*int size_b = ft_lstsize(*b);
-	if (pos > size_b / 2)
+	else
 	{
-		while (pos < size_b)
+		while(pos < size_a)
 		{
-			ft_reverse_rotate_rrb(b);
+			ft_reverse_rotate_rra(a);
 			pos++;
 		}
 	}
-	else
-	{
-		while (pos > 0)
-		{
-			ft_rotate_rb(b);
-			pos--;
-		}
-	}*/
-	if (*b && (*b)->next && (*b)->val < (*b)->next->val)
-  	 ft_rotate_rb(b);
+//	if (*b && (*b)->next && (*b)->val < (*b)->next->val)
+  //	 ft_rotate_rb(b);
 }
 //trouver le pivot avec mediane
 void	comparaison_pivot_1(t_pile **a, t_pile **b)
@@ -101,12 +86,11 @@ void	transfer_max_b(t_pile **a, t_pile **b, int pivot)
 
 	if (pos_min == -1)
   	return;
-	move_max_top_a(a, b, pos_min);
+	move_max_top_a(a, pos_min);
 	ft_push_pb(b ,a);
 // Si b contient plus d'un élément et que le nouveau est plus petit
 	if (*b && (*b)->next && (*b)->val < (*b)->next->val)
     ft_rotate_rb(b);
-
 }
 //separe les elements >= pivot
 void	diviser_pour_mieux_regner(t_pile **a, t_pile **b, int pivot)
