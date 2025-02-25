@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:13:20 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/24 10:37:22 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/25 13:31:39 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,33 @@
 
 #include "../push_swap.h"
 
+//regarde si l'ordre au début est croissant.
+/*int	opti_look_first_croissant(t_pile *a)
+{
+	int	i = 0;
+	while(a && a->next)
+	{
+		if (a->val > a->next->val)
+			return i;
+		a = a->next;
+		i++;
+	}
+	return (0);
+}*/
 int	mediane(t_pile *a)
 {
 	t_pile	*tmp;
 	t_pile	*tmp_little;
 	t_pile	*tmp_big;
 	int		tmp_pivot;
+//	int	index_croissant;
 
+/*	index_croissant = opti_look_first_croissant(a);
+	while (index_croissant > 0)
+	{
+		a = a->next;
+		index_croissant--;
+	}*/
 	tmp = a;
 	tmp_little = a;
 	tmp_big = a;
@@ -32,11 +52,11 @@ int	mediane(t_pile *a)
 		else if (tmp->val < tmp_little->val)
 			tmp_little = tmp;
 		tmp = tmp->next;
-//		printf("tmp_big: %d, tmp_little: %d\n", tmp_big->val, tmp_little->val);
+	//	printf("tmp_big: %d, tmp_little: %d\n", tmp_big->val, tmp_little->val);
 	}
 	tmp_pivot = (tmp_big->val - tmp_little->val);
 	tmp_pivot = tmp_pivot / 2;
 	tmp_pivot = (tmp_pivot + tmp_little->val);
-//	printf ("le pivot est: %d\n", tmp_pivot);
+	//printf ("le pivot est: %d\n", tmp_pivot);
 	return (tmp_pivot);
 }
