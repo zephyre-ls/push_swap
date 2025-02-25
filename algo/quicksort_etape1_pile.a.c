@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/25 14:44:13 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/25 14:51:12 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	move_max_top_a(t_pile **a, t_pile **b, int pos)
 			pos--;
 		}
 	}
-	int size_b = ft_lstsize(*b);
+	/*int size_b = ft_lstsize(*b);
 	if (pos > size_b / 2)
 	{
 		while (pos < size_b)
@@ -82,7 +82,7 @@ void	move_max_top_a(t_pile **a, t_pile **b, int pos)
 			ft_rotate_rb(b);
 			pos--;
 		}
-	}
+	}*/
 	if (*b && (*b)->next && (*b)->val < (*b)->next->val)
   	 ft_rotate_rb(b);
 }
