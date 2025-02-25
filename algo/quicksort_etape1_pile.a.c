@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/25 15:17:31 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/25 16:59:06 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	position_max_sup_pivot(t_pile *a, int pivot)
 
 	while(tmp_a)
 	{
-		if(tmp_a->val > pivot && tmp_a->val > max_val)
+		if(tmp_a->val < pivot && tmp_a->val < max_val)
 		{
 			max_val = tmp_a->val;
 			max_pos = pos;
@@ -89,8 +89,8 @@ void	transfer_max_b(t_pile **a, t_pile **b, int pivot)
 	move_max_top_a(a, pos_min);
 	ft_push_pb(b ,a);
 // Si b contient plus d'un élément et que le nouveau est plus petit
-	if (*b && (*b)->next && (*b)->val < (*b)->next->val)
-    ft_rotate_rb(b);
+	//if (*b && (*b)->next && (*b)->val < (*b)->next->val)
+    //ft_rotate_rb(b);
 }
 //separe les elements >= pivot
 void	diviser_pour_mieux_regner(t_pile **a, t_pile **b, int pivot)

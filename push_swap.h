@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/25 15:15:19 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/25 15:54:58 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,6 @@ void	decroissant_b(t_pile **b);
 void    quick_sort(t_pile **a, t_pile **b);
 //fonct° pour l'optimisation
 int	opti_look_first_croissant(t_pile *a);
+void	tri_3_elements(t_pile **a);
 //int	position_min_sup_pivot(t_pile *a, int pivot);
 #endif
