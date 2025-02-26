@@ -6,7 +6,7 @@
 /*   By: lduflot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 12:31:39 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/26 10:27:52 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/26 10:47:15 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	print_pile(t_pile *a)
 	}
 	printf("\n");
 }
-
 //Test fonctions pour main.
 	/*printf("\n push b \n");
 	ft_push_pb(&b, &a);

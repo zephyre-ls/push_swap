@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:11:58 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/26 09:28:07 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/26 10:48:17 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void    quick_sort(t_pile **a, t_pile **b)
 	}
 	else if (first < second && second > third && first > third)
 		ft_reverse_rotate_rra(a); //  231 -> 123
-
 //	printf("après tri_3 : ");
 //	print_pile(*a);
 }
