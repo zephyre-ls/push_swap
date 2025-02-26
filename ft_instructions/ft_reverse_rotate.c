@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:55:48 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/25 14:46:18 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/26 09:04:34 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,15 @@
 //last = ft_lstlast(*a); // Trouve le dernier
 //before_last->next = NULL; // Coupe le lien avec le dernier
 //ft_lstadd_front(a, last); // Ajoute le dernier au début
+
+t_pile	*ft_lstbefore_last(t_pile *lst)
+{
+	if (lst == NULL || lst->next == NULL)
+		return (NULL);
+	while (lst->next->next)
+		lst = lst->next;
+	return (lst);
+}
 
 void	ft_reverse_rotate_rra(t_pile **a)
 {

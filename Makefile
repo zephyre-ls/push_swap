@@ -6,7 +6,7 @@
 #    By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/30 15:34:26 by lduflot           #+#    #+#              #
-#    Updated: 2025/02/25 09:47:18 by lduflot          ###   ########.fr        #
+#    Updated: 2025/02/26 10:25:10 by lduflot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,12 +20,13 @@ NAME = push_swap
 ###############################
 ##SOURCES
 
-FILES =	check_arguments/ft_check_max_min_int.c \
+FILES = check_arguments/ft_check_arguments_utils.c \
+				check_arguments/ft_check_max_min_int.c \
+				check_arguments/ft_check_one_string.c \
 				check_arguments/ft_check_only_num.c \
 				check_arguments/ft_check_doublon.c \
-				check_arguments/ft_check_one_string.c \
+				check_arguments/check_in_main.c \
 				check_arguments/ft_check_tri.c \
-				check_arguments/ft_check_arguments_utils.c \
 				check_arguments/error.c \
 				ft_instructions/ft_instructions_utils.c \
 				ft_instructions/ft_push.c \

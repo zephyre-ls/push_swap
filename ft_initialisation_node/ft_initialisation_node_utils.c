@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 09:55:32 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/23 19:25:50 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/26 10:28:31 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ void	ft_lstadd_back(t_pile **lst, t_pile *new)
 //taille de la liste
 int	ft_lstsize(t_pile *lst)
 {
-	int	i;
-	t_pile *tmp;
+	int		i;
+	t_pile	*tmp;
 
 	i = 0;
 	tmp = lst;
@@ -84,14 +84,4 @@ t_pile	*ft_lstlast(t_pile *lst)
 		return (lst);
 	}
 	return (NULL);
-}
-
-void	print_pile(t_pile *a)
-{
-	while (a)
-	{
-		printf("%d -> ", a->val);
-		a = a->next;
-	}
-	printf("\n");
 }

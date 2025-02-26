@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/26 00:36:13 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/02/26 09:52:27 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,15 @@ void	move_max_top_a(t_pile **a, int pos)
 	int size_a = ft_lstsize(*a);
 	int mid = size_a/2;
 
-	if (pos <= mid)
+	if (pos == 1)
+		ft_swap_sa(a);
+	else if (pos <= mid)
 	{
 		while (pos > 0)
 		{
 			ft_rotate_ra(a);
 			pos--;
+			print_pile(*a);
 		}
 	}
 	else
@@ -66,15 +69,9 @@ void	move_max_top_a(t_pile **a, int pos)
 		{
 			ft_reverse_rotate_rra(a);
 			pos++;
+			print_pile(*a);
 		}
 	}
-
-}
-//trouver le pivot avec mediane
-void	comparaison_pivot_1(t_pile **a, t_pile **b)
-{
-	int	pivot = mediane(*a);
-	diviser_pour_mieux_regner(a, b, pivot);
 }
 
 //transfére l'élement ci_dessus sur la pile b
@@ -88,9 +85,12 @@ void	transfer_max_b(t_pile **a, t_pile **b, int pivot)
 	ft_push_pb(b ,a);
 
 }
-//separe les elements >= pivot
-void	diviser_pour_mieux_regner(t_pile **a, t_pile **b, int pivot)
+
+//trouver pivot, separe les elements <= pivot
+void	diviser_pour_mieux_regner(t_pile **a, t_pile **b)
 {
+	int	pivot = mediane(*a);
+
 	while(position_max_min_pivot(*a, pivot) != -1)
 		transfer_max_b(a, b, pivot);
 }
