@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:11:58 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/26 10:48:17 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/03 09:32:30 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ void    quick_sort(t_pile **a, t_pile **b)
 	while ((size_a = ft_lstsize(*a)) > 3)
   {
 		diviser_pour_mieux_regner(a, b);
-      print_pile(*a);
-			print_pile(*b);
+		printf("diviser pour mieux regner:");
+    print_pile(*a);
+		print_pile(*b);
   }
 	if (ft_lstsize(*a) == 3)
 	{
@@ -43,8 +44,8 @@ void    quick_sort(t_pile **a, t_pile **b)
 	int second = (*a)->next->val;
 	int third = (*a)->next->next->val;
 
-	printf("avant tri_3 : ");
-	print_pile(*a);
+//	printf("avant tri_3 : ");
+//	print_pile(*a);
 
 	if (first > second && second < third && first < third)
 		ft_swap_sa(a); //213 -> 123
@@ -64,4 +65,11 @@ void    quick_sort(t_pile **a, t_pile **b)
 		ft_reverse_rotate_rra(a); //  231 -> 123
 //	printf("après tri_3 : ");
 //	print_pile(*a);
+}
+
+void	count_instruction(void)
+{
+	static	int count_instruction = 0;
+	count_instruction++;
+	printf("Nbr d'instructions:%d\n", count_instruction);
 }

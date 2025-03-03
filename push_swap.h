@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/26 10:44:20 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/03 09:32:18 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,7 @@ void	diviser_pour_mieux_regner(t_pile **a, t_pile **b);
 void	transfer_max_b(t_pile **a, t_pile **b, int pivot);
 void	quick_sort(t_pile **a, t_pile **b);
 void	tri_3_elements(t_pile **a);
+/*Compteur instruction */
+void	count_instruction(void);
 
 #endif

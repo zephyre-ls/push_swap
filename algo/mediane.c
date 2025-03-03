@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:13:20 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/26 09:38:58 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/01 09:25:30 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ int	mediane(t_pile *a)
 		else if (tmp->val < tmp_little->val)
 			tmp_little = tmp;
 		tmp = tmp->next;
-		printf("tmp_big: %d, tmp_little: %d\n", tmp_big->val, tmp_little->val);
+	//	printf("tmp_big: %d, tmp_little: %d\n", tmp_big->val, tmp_little->val);
 	}
 	tmp_pivot = (tmp_big->val - tmp_little->val);
 	tmp_pivot = tmp_pivot / 2;
 	tmp_pivot = (tmp_pivot + tmp_little->val);
-	printf("le pivot est: %d\n", tmp_pivot);
+//	printf("le pivot est: %d\n", tmp_pivot);
 	return(tmp_pivot);
 }
 //regarde si l'ordre au début est croissant.

@@ -11,3 +11,14 @@
 
 - void  ft_check_doublon(char *str)
     - Verifie qu'il n'y ai aucun doublon.
+
+EVALUATION =
+
+Pour 100 nombres:
+Less than 700 = 5; 900 = 4; 1100 = 3; 1300 = 2; 1500 = 1
+Actuellement (03/04 = entre 1500/1800)
+Pour 500 nombres:
+Less than 5500 = 5; 7000 = 4; 8500 = 3; 10000 = 2; 11500 = 1
+Actuellement (03/04 = entre 32000/35000)
+
+Pour 10 nombres actuellement entre 20/30 ... 

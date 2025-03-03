@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/26 10:50:56 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/03 18:04:06 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int	position_max_min_pivot(t_pile *a, int pivot)
 		pos++;
 	}
 	return (max_pos);
+	printf("position%d", max_pos);
 }
 
 //deplacer element trouvé si_dessus en haut de la pile A 
@@ -64,6 +65,7 @@ void	move_max_top_a(t_pile **a, int pos)
 		{
 			ft_rotate_ra(a);
 			pos--;
+			printf("move_max_top_a_ra");
 			print_pile(*a);
 		}
 	}
@@ -73,6 +75,7 @@ void	move_max_top_a(t_pile **a, int pos)
 		{
 			ft_reverse_rotate_rra(a);
 			pos++;
+			printf("mova_max_top_a_rra:");
 			print_pile(*a);
 		}
 	}
