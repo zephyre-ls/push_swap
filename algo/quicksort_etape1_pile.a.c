@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/03 18:04:06 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/04 13:40:14 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,9 @@ void	diviser_pour_mieux_regner(t_pile **a, t_pile **b)
 	int	pivot = mediane(*a);
 
 	while(position_max_min_pivot(*a, pivot) != -1)
+	{
 		transfer_max_b(a, b, pivot);
+		if(ft_lstsize(*a) == 3)
+			tri_3_elements(a);
+	}
 }

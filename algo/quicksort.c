@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:11:58 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/03 09:32:30 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/04 13:38:12 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ void    quick_sort(t_pile **a, t_pile **b)
     print_pile(*a);
 		print_pile(*b);
   }
-	if (ft_lstsize(*a) == 3)
+	/*if (ft_lstsize(*a) == 3)
 	{
 		print_pile(*a);
 		tri_3_elements(a);
 		print_pile(*a);
-	}
+	}*/
   while (*b)
 	{
 		ft_push_pa(a, b);
@@ -44,8 +44,8 @@ void    quick_sort(t_pile **a, t_pile **b)
 	int second = (*a)->next->val;
 	int third = (*a)->next->next->val;
 
-//	printf("avant tri_3 : ");
-//	print_pile(*a);
+	printf("avant tri_3 : ");
+	print_pile(*a);
 
 	if (first > second && second < third && first < third)
 		ft_swap_sa(a); //213 -> 123
