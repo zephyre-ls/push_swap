@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 09:27:32 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/09 18:42:12 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/10 20:06:32 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	push_pb_trie_optimus(t_pile **a, t_pile **b)
 			pos++;
 		}
 	//	if (pos == 1)
-		//	ft_swap_sb(b);
+	//		ft_swap_sb(b);
 		if (pos < size_b / 2)
 		{
 			while (pos > 0)
@@ -85,7 +85,7 @@ void	trier_pile_b(t_pile **a, t_pile **b)
 			tmp_b = tmp_b->next;
 			pos++;
 		}
-	//	if (pos == 1)
+		//if (pos == 1)
 		//	ft_swap_sb(b);
 		if (max_pos < pos / 2)
 		{
@@ -108,6 +108,17 @@ void	tri_3_elements(t_pile **a)
 	int	second;
 	int	third;
 
+	if (ft_lstsize(*a) == 2)
+	{
+		first = (*a)->val;
+		second = (*a)->next->val;
+		if (second < first)
+			ft_swap_sa(a);
+	}
+	if(ft_lstsize(*a) == 3)
+	{
+	printf("tri_3_element non trie\n");
+	print_pile(*a);
 	first = (*a)->val;
 	second = (*a)->next->val;
 	third = (*a)->next->next->val;
@@ -127,6 +138,7 @@ void	tri_3_elements(t_pile **a)
 	}
 	else if (first < second && second > third && first > third)
 		ft_reverse_rotate_rra(a);
-//	printf("tri_3_elemen\n");
-//	print_pile(*a);
+	printf("tri_3_elemen\n");
+	print_pile(*a);
+	}
 }

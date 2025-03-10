@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/08 10:01:40 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/10 19:43:36 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ void	print_pile(t_pile *a);
 
 /* Algo, quick_sort */
 int		mediane(t_pile *a);
+int		pivot_10(t_pile *a);
 void	tri_3_elements(t_pile **a);
 void	quick_sort(t_pile **a, t_pile **b);
 void	trier_pile_b(t_pile **a, t_pile **b);
