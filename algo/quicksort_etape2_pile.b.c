@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 09:27:32 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/10 20:06:32 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/10 21:12:56 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ void	push_pb_trie_optimus(t_pile **a, t_pile **b)
 			tmp_b = tmp_b->next;
 			pos++;
 		}
-	//	if (pos == 1)
-	//		ft_swap_sb(b);
 		if (pos < size_b / 2)
 		{
 			while (pos > 0)
@@ -62,7 +60,7 @@ void	push_pb_trie_optimus(t_pile **a, t_pile **b)
 }
 
 //Envoie pile.b trié décroissante dans pile.a
-void	trier_pile_b(t_pile **a, t_pile **b)
+void	push_pa_decroissant(t_pile **a, t_pile **b)
 {
 	int		max_val;
 	int		pos;
@@ -85,8 +83,6 @@ void	trier_pile_b(t_pile **a, t_pile **b)
 			tmp_b = tmp_b->next;
 			pos++;
 		}
-		//if (pos == 1)
-		//	ft_swap_sb(b);
 		if (max_pos < pos / 2)
 		{
 			while ((*b)->val != max_val)

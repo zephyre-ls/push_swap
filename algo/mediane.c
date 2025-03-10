@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:13:20 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/10 19:29:42 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/10 21:19:13 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,15 @@ int	mediane(t_pile *a)
 	return (tmp_pivot);
 }
 
+//quand 11 element dans .a le pivot devient le 3eme plus grand nombre de la liste
+// permet d eviter le cas ou la mediane est plus grande que le 3eme plus grand element
 int	pivot_10(t_pile *a)
 {
 	t_pile *tmp_a;
 	int	first;
 	int	second;
-	int third;
+	int	third_pivot;
 
-	printf("entre dans pivot_10");
 	tmp_a = a;
 	first = 0;
 	second = 0;
@@ -57,21 +58,20 @@ int	pivot_10(t_pile *a)
   {
 		if (tmp_a->val > first)
     {
-      third = second;
+      third_pivot = second;
       second = first;
       first = tmp_a->val;
     }
     else if (tmp_a->val > second)
     {
-      third = second;
+      third_pivot = second;
       second = tmp_a->val;
     }
-    else if (tmp_a->val > third)
-			third = tmp_a->val;
+    else if (tmp_a->val > third_pivot)
+			third_pivot = tmp_a->val;
     tmp_a = tmp_a->next;
     }
-		printf("Valeur pivot_10 %d\n", third);
-		return third ;
+		return third_pivot ;
 }
 
 

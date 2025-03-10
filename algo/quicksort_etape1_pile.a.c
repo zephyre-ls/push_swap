@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/10 20:44:10 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/10 21:34:45 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void	transferer_pivot(t_pile **a, t_pile **b, int pivot)
 {
 	int	size;
 	int	i;
-//	int	rotations;
 	int	last_moved;
 
 	size = ft_lstsize(*a);
