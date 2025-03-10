@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/04 13:40:14 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/09 18:41:59 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,81 +27,45 @@ PROBLEMES =
 
 #include "../push_swap.h"
 
-//recherche de la position du PLUS grand element < pivot dans pile a
-int	position_max_min_pivot(t_pile *a, int pivot)
+/* 
+** envoie les nombres inf au pivot dans pile.b
+** last_moved = variable pour suivre si un element a été déplacé
+** 1er boucle = continue jusqu'a push tous les nombre a dans b
+** on push des qu'inf au pivot
+** si valeur >= pivot on rotate (opti swap? rra?)
+** si aucun element déplacé aprés un certain nombre de rotate = break;
+*/
+void	transferer_pivot(t_pile **a, t_pile **b, int pivot)
 {
-	int	pos = 0;
-	int	max_pos = -1;
-	int	max_val = pivot;
-	t_pile *tmp_a = a;
+	int	size;
+	int	i;
+//	int	rotations;
+	int	last_moved;
 
-	while(tmp_a)
+	size = ft_lstsize(*a);
+	i = 0;
+	//rotations = 0;
+	last_moved = 0;
+	while (size > 3)
 	{
-		if(tmp_a->val < pivot && tmp_a->val < max_val)
+		if ((*a)->val < pivot)
 		{
-			max_val = tmp_a->val;
-			max_pos = pos;
+			push_pb_trie_optimus(a, b);
+			i++;
+			last_moved = 0;
 		}
-		tmp_a = tmp_a->next;
-		pos++;
-	}
-	return (max_pos);
-	printf("position%d", max_pos);
-}
-
-//deplacer element trouvé si_dessus en haut de la pile A 
-void	move_max_top_a(t_pile **a, int pos)
-{
-	if (pos == -1)
-		return ;
-	int size_a = ft_lstsize(*a);
-	int mid = size_a/2;
-
-	if (pos == 1)
-		ft_swap_sa(a);
-	else if (pos <= mid)
-	{
-		while (pos > 0)
+		else
 		{
 			ft_rotate_ra(a);
-			pos--;
-			printf("move_max_top_a_ra");
-			print_pile(*a);
+			//rotations++;
+			last_moved++;
 		}
-	}
-	else
-	{
-		while(pos < size_a)
-		{
-			ft_reverse_rotate_rra(a);
-			pos++;
-			printf("mova_max_top_a_rra:");
-			print_pile(*a);
-		}
-	}
-}
-
-//transfére l'élement ci_dessus sur la pile b
-void	transfer_max_b(t_pile **a, t_pile **b, int pivot)
-{
-	int	pos_min = position_max_min_pivot(*a, pivot);
-
-	if (pos_min == -1)
-  	return;
-	move_max_top_a(a, pos_min);
-	ft_push_pb(b ,a);
-
-}
-
-//trouver pivot, separe les elements <= pivot
-void	diviser_pour_mieux_regner(t_pile **a, t_pile **b)
-{
-	int	pivot = mediane(*a);
-
-	while(position_max_min_pivot(*a, pivot) != -1)
-	{
-		transfer_max_b(a, b, pivot);
-		if(ft_lstsize(*a) == 3)
+		if (last_moved > size * 2)
+			break;
+		size = ft_lstsize(*a);
+	//	printf("taille a aprés opération: %d\n", size);
+		//if (rotations > size * 2 && last_moved == 0)
+		if (size == 3)	
 			tri_3_elements(a);
 	}
 }
