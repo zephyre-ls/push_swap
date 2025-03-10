@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/10 19:08:33 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/10 20:44:10 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void	transferer_pivot(t_pile **a, t_pile **b, int pivot)
 
 	size = ft_lstsize(*a);
 	i = 0;
-	//rotations = 0;
 	last_moved = 0;
 	while (size > 3)
 	{
@@ -57,18 +56,16 @@ void	transferer_pivot(t_pile **a, t_pile **b, int pivot)
 		else
 		{
 			ft_rotate_ra(a);
-			//rotations++;
 			last_moved++;
 		}
-		if (last_moved > size * 2)
+		if (last_moved > size)
 			break;
 		size = ft_lstsize(*a);
 		printf("taille pivot %d\n", pivot);
 		print_pile(*a);
 		printf("taille a aprés opération: %d\n", size);
 		print_pile(*a);
-		//if (rotations > size * 2 && last_moved == 0)
-		if (size == 3)	
+		if (size == 3)
 			tri_3_elements(a);
 	}
 }
