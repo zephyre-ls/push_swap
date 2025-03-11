@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/11 14:40:10 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/11 19:29:42 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,28 @@ int	position_inferieur_pivot(t_pile *a, int pivot)
 	return (-1);
 }
 
+/*void	move_first_elem_inf_pivot(t_pile **a, t_pile **b, int pos)
+{
+	if (pos == -1)
+		return ;
+	int	size_a = ft_lstsize(*a);
+	int	mid = size_a / 2;
+	int	ra_count = 0;
+	int	rb_count = 0;
+
+	if (pos > 0 && pos <= mid)
+		ra_count = pos;
+	else if (pos > mid)
+		ra_count = -(size_a - pos);
+
+	// Vérifier si `push_pb_trie_optimus` va aussi faire un `rb`
+	if (*b && (*a)->val < (*b)->val)
+		rb_count++;
+
+	// Appliquer les rotations optimisées
+	ft_rotate_rr_if_possible(a, b, &ra_count, &rb_count);
+}*/
+
 void	move_first_elem_inf_pivot(t_pile **a, int pos)
 {
 	if (pos == -1)
@@ -83,7 +105,7 @@ void	move_first_elem_inf_pivot(t_pile **a, int pos)
 void	transferer_pivot(t_pile **a, t_pile **b, int pivot)
 {
 	int	size;
-	int	i;
+	int	i; 
 	int	last_moved;
 
 	size = ft_lstsize(*a);
@@ -114,3 +136,16 @@ void	transferer_pivot(t_pile **a, t_pile **b, int pivot)
 			tri_3_elements(a);
 	}
 }
+
+void	ft_rotate_rr_if_possible(t_pile **a, t_pile **b, int *ra_count, int *rb_count)
+{
+	int	rr_count;
+
+	if (ra_count == rb_count)
+		ft_reverse_rr(a, b);
+	else if (ra_count > rb_count)
+		ft_reverse_ra(a);
+	else if (rb_count > ra_count)
+		ft_reverse_rb(b);
+}
+
