@@ -22,3 +22,6 @@ Less than 5500 = 5; 7000 = 4; 8500 = 3; 10000 = 2; 11500 = 1
 Actuellement (03/04 = entre 32000/35000)
 
 Pour 10 nombres actuellement entre 20/30 ... 
+
+
+Generateur de nombre https://www.calculatorsoup.com/calculators/statistics/random-number-generator.php

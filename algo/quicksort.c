@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/*e************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   quicksort.c                                        :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:11:58 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/10 21:20:02 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/11 16:33:05 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,15 @@ void	diviser_pour_mieux_regner(t_pile **a, t_pile **b)
 
 	while(ft_lstsize(*a) > 11 && ft_lstsize(*a) > 3)
 	{
-				printf("taille a %d\n", ft_lstsize(*a));
-				printf("entre pour pivot\n");
+			//	printf("taille a %d\n", ft_lstsize(*a));
+			//	printf("entre pour pivot\n");
 				pivot = mediane(*a);
 				transferer_pivot(a, b, pivot);
 	}
 	while (ft_lstsize(*a) <= 11 && ft_lstsize(*a) > 3)
 	{
-				printf("taille a %d\n", ft_lstsize(*a));
-				printf("entre pour pivot2");
+			//	printf("taille a %d\n", ft_lstsize(*a));
+			//	printf("entre pour pivot2");
 				pivot2 = pivot_10(*a);
 				transferer_pivot(a ,b, pivot2);
 	}
@@ -50,5 +50,5 @@ void	count_instruction(void)
 	static int	count_instruction = 0;
 
 	count_instruction++;
-	printf("Nbr d'instructions:%d\n", count_instruction);
+//	printf("Nbr d'instructions:%d\n", count_instruction);
 }

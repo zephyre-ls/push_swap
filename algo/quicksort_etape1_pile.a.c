@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/10 21:34:45 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/11 14:40:10 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,51 @@ PROBLEMES =
 ** si valeur >= pivot on rotate (opti swap? rra?)
 ** si aucun element déplacé aprés un certain nombre de rotate = break;
 */
+
+int	position_inferieur_pivot(t_pile *a, int pivot)
+{
+	int	pos = 0;
+	t_pile *tmp_a = a;
+
+	while (tmp_a)
+	{
+		if(tmp_a->val < pivot)
+			return (pos) ; 
+		tmp_a = tmp_a->next;
+		pos++;
+	}
+	return (-1);
+}
+
+void	move_first_elem_inf_pivot(t_pile **a, int pos)
+{
+	if (pos == -1)
+		return ;
+	int	size_a = ft_lstsize(*a);
+	int	mid = size_a/2;
+
+	if (pos == 0)
+		return ;
+	else if (pos == 1)
+		ft_rotate_ra(a);
+	else if (pos <= mid)
+	{
+		while (pos > 0)
+		{
+			ft_rotate_ra(a);
+			pos--;
+		}
+	}
+	else
+	{
+		while (pos < size_a)
+		{
+			ft_reverse_rotate_rra(a);
+			pos++;
+		}
+	}
+}
+
 void	transferer_pivot(t_pile **a, t_pile **b, int pivot)
 {
 	int	size;
@@ -54,16 +99,17 @@ void	transferer_pivot(t_pile **a, t_pile **b, int pivot)
 		}
 		else
 		{
-			ft_rotate_ra(a);
+			int	pos =	position_inferieur_pivot(*a, pivot);
+			move_first_elem_inf_pivot(a, pos);
 			last_moved++;
 		}
 		if (last_moved > size)
 			break;
 		size = ft_lstsize(*a);
-		printf("taille pivot %d\n", pivot);
-		print_pile(*a);
-		printf("taille a aprés opération: %d\n", size);
-		print_pile(*a);
+	//	printf("taille pivot %d\n", pivot);
+	//	print_pile(*a);
+	//	printf("taille a aprés opération: %d\n", size);
+	//	print_pile(*a);
 		if (size == 3)
 			tri_3_elements(a);
 	}

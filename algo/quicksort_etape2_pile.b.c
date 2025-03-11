@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 09:27:32 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/10 21:12:56 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/11 16:37:50 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	push_pb_trie_optimus(t_pile **a, t_pile **b)
 		{
 			while (pos > 0)
 			{
+				if (move_first_elem_inf_pivot(a, pos)
 				ft_rotate_rb(b);
 				pos--;
 			}
@@ -113,8 +114,8 @@ void	tri_3_elements(t_pile **a)
 	}
 	if(ft_lstsize(*a) == 3)
 	{
-	printf("tri_3_element non trie\n");
-	print_pile(*a);
+//	printf("tri_3_element non trie\n");
+//	print_pile(*a);
 	first = (*a)->val;
 	second = (*a)->next->val;
 	third = (*a)->next->next->val;
@@ -134,7 +135,7 @@ void	tri_3_elements(t_pile **a)
 	}
 	else if (first < second && second > third && first > third)
 		ft_reverse_rotate_rra(a);
-	printf("tri_3_elemen\n");
-	print_pile(*a);
+//	printf("tri_3_elemen\n");
+//	print_pile(*a);
 	}
 }
