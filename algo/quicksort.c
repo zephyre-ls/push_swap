@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:11:58 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/11 16:33:05 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/11 20:47:26 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ void	count_instruction(void)
 	static int	count_instruction = 0;
 
 	count_instruction++;
-//	printf("Nbr d'instructions:%d\n", count_instruction);
+	printf("Nbr d'instructions:%d\n", count_instruction);
 }

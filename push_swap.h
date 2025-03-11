@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/11 17:33:02 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/11 19:36:11 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ void	count_instruction(void);
 
 //test
 int	position_inferieur_pivot(t_pile *a, int pivot);
-void	move_first_elem_inf_pivot(t_pile **a, int pos);
+void	move_first_elem_inf_pivot(t_pile **a, t_pile **b, int pos);
 void	ft_rotate_rr_if_possible(t_pile **a, t_pile **b, int *ra_count, int *rb_count);
 
 #endif

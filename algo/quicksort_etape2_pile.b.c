@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 09:27:32 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/11 17:32:07 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/11 21:02:23 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	push_pb_trie_optimus(t_pile **a, t_pile **b)
 	int		val;
 	int		size_b;
 	int		pos;
+	int	rb_count = 0;
+	int ra_count = 0;
 	t_pile	*tmp_b;
 
 	size_b = ft_lstsize(*b);
@@ -42,7 +44,9 @@ void	push_pb_trie_optimus(t_pile **a, t_pile **b)
 		{
 			while (pos > 0)
 			{
-				ft_rotate_rb(b);
+			//	ft_rotate_rb(b);
+			rb_count++;
+			ft_rotate_rr_if_possible(a, b, &ra_count, &rb_count);
 				pos--;
 			}
 		}
@@ -58,49 +62,6 @@ void	push_pb_trie_optimus(t_pile **a, t_pile **b)
 		ft_push_pb(b, a);
 	}
 }
-
-/*void	push_pb_trie_optimus(t_pile **a, t_pile **b)
-{
-	int		val;
-	int		size_b;
-	int		pos;
-	int		ra_count = 0;
-	int		rb_count = 0;
-	t_pile	*tmp_b;
-
-	size_b = ft_lstsize(*b);
-	pos = 0;
-	tmp_b = *b;
-	val = (*a)->val;
-	if (!*b)
-	{
-		ft_push_pb(b, a);
-		return ;
-	}
-	if (val > (*b)->val)
-		ft_push_pb(b, a);
-	else
-	{
-		while (tmp_b && val < tmp_b->val)
-		{
-			tmp_b = tmp_b->next;
-			pos++;
-		}
-		if (pos < size_b / 2)
-			rb_count = pos;
-		else
-			rb_count = -(size_b - pos);
-
-		// Si un ra est déjà prévu, on l'incrémente
-		if ((*a)->val < val) 
-			ra_count++;
-
-		// On applique les rotations optimisées
-		ft_rotate_rr_if_possible(a, b, &ra_count, &rb_count);
-		
-		ft_push_pb(b, a);
-	}
-}*/
 
 //Envoie pile.b trié décroissante dans pile.a
 void	push_pa_decroissant(t_pile **a, t_pile **b)
