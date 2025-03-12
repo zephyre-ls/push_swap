@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/12 14:38:59 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/12 18:00:41 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ void	ft_swap_ss(t_pile **a, t_pile **b);
 /* Permet de visualiser l'état des piles */
 void	print_pile(t_pile *a);
 /* Affichage des instructions */
-void	count_instruction(void);
+//void	count_instruction(void);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar(char c, int fd);
@@ -107,5 +107,9 @@ void	transferer_pivot(t_pile **a, t_pile **b, int pivot);
 //test
 int	position_inferieur_pivot(t_pile *a, int pivot);
 void	move_first_elem_inf_pivot(t_pile **a, int pos);
+
+void	count_instruction(char *instruction);
+int	ft_strcmp(const char *s1, const char *s2);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 #endif

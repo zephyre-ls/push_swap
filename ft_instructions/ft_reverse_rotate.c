@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:55:48 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/12 15:02:05 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/12 18:03:14 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ void	ft_reverse_rotate_rra(t_pile **a)
 	last = ft_lstlast(*a);
 	before_last->next = NULL;
 	ft_lstadd_front(a, last);
-	ft_putendl_fd("rra", 1);
-	count_instruction();
+//	ft_putendl_fd("rra", 1);
+	count_instruction("rra");
 }
 
 void	ft_reverse_rotate_rrb(t_pile **b)
@@ -57,14 +57,14 @@ void	ft_reverse_rotate_rrb(t_pile **b)
 	last = ft_lstlast(*b);
 	before_last->next = NULL;
 	ft_lstadd_front(b, last);
-	ft_putendl_fd("rrb", 1);
-	count_instruction();
+	//ft_putendl_fd("rrb", 1);
+	count_instruction("rrb");
 }
 
 void	ft_reverse_rotate_rrr(t_pile **a, t_pile **b)
 {
 	ft_reverse_rotate_rra(a);
 	ft_reverse_rotate_rrb(b);
-	ft_putendl_fd("rrr", 1);
-	count_instruction();
+	//ft_putendl_fd("rrr", 1);
+	count_instruction("rrr");
 }

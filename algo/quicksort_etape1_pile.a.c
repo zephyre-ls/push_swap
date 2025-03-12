@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/12 14:13:39 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/12 21:24:55 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int	position_inferieur_pivot(t_pile *a, int pivot)
 	}
 	return (-1);
 }
-
 
 void	move_first_elem_inf_pivot(t_pile **a, int pos)
 {
