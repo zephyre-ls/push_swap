@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/11 19:36:11 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/12 14:38:59 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,12 @@ void	ft_swap_ss(t_pile **a, t_pile **b);
 
 /* Permet de visualiser l'état des piles */
 void	print_pile(t_pile *a);
+/* Affichage des instructions */
+void	count_instruction(void);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putchar(char c, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 /* Algo, quick_sort */
 int		mediane(t_pile *a);
@@ -98,13 +104,8 @@ void	push_pb_trie_optimus(t_pile **a, t_pile **b);
 void	diviser_pour_mieux_regner(t_pile **a, t_pile **b);
 void	transferer_pivot(t_pile **a, t_pile **b, int pivot);
 
-/* Compteur d'instructions */
-void	count_instruction(void);
-
-
 //test
 int	position_inferieur_pivot(t_pile *a, int pivot);
-void	move_first_elem_inf_pivot(t_pile **a, t_pile **b, int pos);
-void	ft_rotate_rr_if_possible(t_pile **a, t_pile **b, int *ra_count, int *rb_count);
+void	move_first_elem_inf_pivot(t_pile **a, int pos);
 
 #endif

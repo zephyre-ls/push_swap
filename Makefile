@@ -6,7 +6,7 @@
 #    By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/30 15:34:26 by lduflot           #+#    #+#              #
-#    Updated: 2025/02/26 10:25:10 by lduflot          ###   ########.fr        #
+#    Updated: 2025/03/12 14:52:25 by lduflot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ FILES = check_arguments/ft_check_arguments_utils.c \
 				check_arguments/check_in_main.c \
 				check_arguments/ft_check_tri.c \
 				check_arguments/error.c \
-				ft_instructions/ft_instructions_utils.c \
+				ft_instructions/affichage.c \
+				ft_instructions/affichage_utils.c \
 				ft_instructions/ft_push.c \
 				ft_instructions/ft_reverse_rotate.c \
 				ft_instructions/ft_rotate.c \

@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:11:58 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/12 00:15:14 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/12 14:09:07 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,4 @@ void	diviser_pour_mieux_regner(t_pile **a, t_pile **b)
 	}
 	if(ft_lstsize(*a) == 3 || ft_lstsize(*a) == 2)
 		tri_3_elements(a);
-}
-
-void	count_instruction(void)
-{
-	static int	count_instruction = 0;
-
-	count_instruction++;
-	//printf("Nbr d'instructions:%d\n", count_instruction);
 }

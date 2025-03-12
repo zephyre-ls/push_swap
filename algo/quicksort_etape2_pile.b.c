@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 09:27:32 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/12 00:21:17 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/12 14:13:22 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	push_pb_trie_optimus(t_pile **a, t_pile **b)
 	int		val;
 	int		size_b;
 	int		pos;
-	int	rb_count = 0;
-	int ra_count = 0;
 	t_pile	*tmp_b;
 
 	size_b = ft_lstsize(*b);
@@ -44,13 +42,7 @@ void	push_pb_trie_optimus(t_pile **a, t_pile **b)
 		{
 			while (pos > 0)
 			{
-			//	ft_rotate_rb(b);
-			//rb_count++;
-				ft_rotate_rr_if_possible(a, b, &ra_count, &rb_count);
-				//if (ra_count != -1)
-					//ra_count++;
-				//if(rb_count != -1)
-					//rb_count++;
+				ft_rotate_rb(b);
 				pos--;
 			}
 		}

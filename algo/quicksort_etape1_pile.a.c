@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 19:15:51 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/12 00:21:47 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/12 14:13:39 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,12 @@ int	position_inferieur_pivot(t_pile *a, int pivot)
 }
 
 
-void	move_first_elem_inf_pivot(t_pile **a, t_pile **b, int pos)
+void	move_first_elem_inf_pivot(t_pile **a, int pos)
 {
 	if (pos == -1)
 		return ;
 	int	size_a = ft_lstsize(*a);
 	int	mid = size_a/2;
-	int	ra_count = 0;
-	int	rb_count = 0;
 
 	if (pos == 0)
 		return ;
@@ -69,13 +67,7 @@ void	move_first_elem_inf_pivot(t_pile **a, t_pile **b, int pos)
 	{
 		while (pos > 0)
 		{
-			ra_count++;
-			ft_rotate_rr_if_possible(a, b, &ra_count, &rb_count);
-			//if (ra_count != -1)
-				//ra_count++;
-			//if(rb_count != -1)
-				//rb_count++;
-		//ft_rotate_ra(a);
+			ft_rotate_ra(a);
 			pos--;
 		}
 	}
@@ -109,7 +101,7 @@ void	transferer_pivot(t_pile **a, t_pile **b, int pivot)
 		else
 		{
 			int	pos =	position_inferieur_pivot(*a, pivot);
-			move_first_elem_inf_pivot(a, b, pos);
+			move_first_elem_inf_pivot(a, pos);
 			last_moved++;
 		}
 		if (last_moved > size)
@@ -124,9 +116,11 @@ void	transferer_pivot(t_pile **a, t_pile **b, int pivot)
 	}
 }
 
-void	ft_rotate_rr_if_possible(t_pile **a, t_pile **b, int *ra_count, int *rb_count)
+/*void	ft_rotate_rr_if_possible(t_pile **a, t_pile **b, int *ra_count, int *rb_count)
 {
-	//int	rr_count;
+	int	rr_count;
+
+	rr_count = -1;
 
 	printf("ra_count = %d, rb_count = %d\n", *ra_count, *rb_count);
 	if (*ra_count == -1)
@@ -142,15 +136,14 @@ void	ft_rotate_rr_if_possible(t_pile **a, t_pile **b, int *ra_count, int *rb_cou
 	}
 	else if (*ra_count > *rb_count)
 	{
-		//printf("entre dans ra\n");
+		printf("entre dans ra\n");
 		ft_rotate_ra(a);
 		(*ra_count)--;
 	}
 	else if (*rb_count > *ra_count)
 	{
-		//printf("entre dans rb\n");
+		printf("entre dans rb\n");
 		ft_rotate_rb(b);
 		(*rb_count)--;
 	}
-}
-
+}*/

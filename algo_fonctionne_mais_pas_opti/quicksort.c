@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:11:58 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/04 13:38:12 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/12 14:08:45 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void    quick_sort(t_pile **a, t_pile **b)
 		ft_push_pa(a, b);
 		printf("fin push a\n");
 		print_pile(*a);
-		print_pile(*b);	
+		print_pile(*b);
 	}
 }
 
@@ -48,28 +48,19 @@ void    quick_sort(t_pile **a, t_pile **b)
 	print_pile(*a);
 
 	if (first > second && second < third && first < third)
-		ft_swap_sa(a); //213 -> 123
+		ft_swap_sa(a);
 	else if (first > second && second > third)
 	{
-		ft_swap_sa(a); //  321 -> 231
-		ft_reverse_rotate_rra(a); // 231 -> 123
+		ft_swap_sa(a);
+		ft_reverse_rotate_rra(a);
 	}
 	else if (first > second && second < third && first > third)
-		ft_rotate_ra(a); // 312 -> 123
+		ft_rotate_ra(a);
 	else if (first < second && second > third && first < third)
 	{
-		ft_swap_sa(a); // 132 -> 123
+		ft_swap_sa(a);
 		ft_rotate_ra(a);
 	}
 	else if (first < second && second > third && first > third)
-		ft_reverse_rotate_rra(a); //  231 -> 123
-//	printf("après tri_3 : ");
-//	print_pile(*a);
-}
-
-void	count_instruction(void)
-{
-	static	int count_instruction = 0;
-	count_instruction++;
-	printf("Nbr d'instructions:%d\n", count_instruction);
+		ft_reverse_rotate_rra(a);
 }
