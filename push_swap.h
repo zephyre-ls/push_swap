@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/14 20:38:07 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/14 20:47:23 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,4 +124,5 @@ void	push_pb_trie_optimus(t_pile **a, t_pile **b);
 void	rotate_opti(t_pile **b, int pos, int size_b);
 int		trouver_position_in_b(t_pile *b, int pos);
 int		ft_strcmp(const char *s1, const char *s2);
+
 #endif
