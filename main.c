@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:38:54 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/14 11:04:15 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/14 20:14:43 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	main(int argc, char **argv)
 	else
 		if_argc_more_than_2(argc, argv, &a);
 	quick_sort(&a, &b);
-	print_pile(a);
 	freepile(a);
 	freepile(b);
 	return (0);

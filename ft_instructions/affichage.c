@@ -6,7 +6,7 @@
 /*   By: lduflot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 14:46:05 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/14 11:08:22 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/14 20:43:38 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	print_pile(t_pile *a)
 void	count_instruction(char *instruction)
 {
 	static char	last_instruction[3] = "";
-	static int	count_instruction = 0;
 
 	if ((ft_strcmp(last_instruction, "ra") == 0
 			&& ft_strcmp(instruction, "rb") == 0)
@@ -37,7 +36,6 @@ void	count_instruction(char *instruction)
 			&& ft_strcmp(instruction, "ra") == 0))
 	{
 		ft_putendl_fd("rr", 1);
-		count_instruction++;
 		last_instruction[0] = '\0';
 	}
 	else if ((ft_strcmp(last_instruction, "rra") == 0
@@ -46,12 +44,16 @@ void	count_instruction(char *instruction)
 			&& ft_strcmp(instruction, "rra") == 0))
 	{
 		ft_putendl_fd("rrr", 1);
-		count_instruction++;
 		last_instruction[0] = '\0';
 	}
 	else
+	{
 		ft_putendl_fd(instruction, 1);
+	}
 }
+//static int	count_instruction = 0;
+//count_instruction++;
+//printf("Total instructions: %d\n", count_instruction);
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/14 11:34:42 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/14 20:38:07 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ int		ft_start(char const *s, int *i);
 char	**ft_split(char const *s);
 char	**ft_freemallocerror(char **bigtab);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+void	ft_free_split(char **bigtab);
 
 /* Initialialisation des nodes à la liste */
 int		ft_lstsize(t_pile *lst);
@@ -93,45 +94,34 @@ void	ft_swap_sa(t_pile **a);
 void	ft_swap_sb(t_pile **b);
 void	ft_swap_ss(t_pile **a, t_pile **b);
 
-/* Permet de visualiser l'état des piles */
-void	print_pile(t_pile *a);
 /* Affichage des instructions */
-//void	count_instruction(void);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putchar(char c, int fd);
+void	print_pile(t_pile *a);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	count_instruction(char *instruction);
 
 /* Algo, quick_sort */
-//int		mediane(t_pile *a);
-//void	transferer_pivot10(t_pile **a, t_pile **b, int pivot);
-void	calculer_pivots(t_pile *a, t_pivots *pivots);
-int		pivot_10(t_pile *a);
+void	quick_sort(t_pile **a, t_pile **b);
+void	diviser_pour_mieux_regner(t_pile **a, t_pile **b);
+//Trie direct
 void	tri_3_elements(t_pile **a);
 void	tri_2_elements(t_pile **a);
-void	quick_sort(t_pile **a, t_pile **b);
+//Recherche de pivot
+void	calculer_pivots(t_pile *a, t_pivots *pivots);
+void	found_pivot(int val, int *first, int *second, int *third);
+int		pivot_10(t_pile *a);
+void	transferer_pivot(t_pile **a, t_pile **b, t_pivots *pivots);
+void	transferer_pivot10(t_pile **a, t_pile **b, int pivot);
+int		position_inferieur_pivot(t_pile *a, int pivot);
+void	move_first_elem_inf_pivot(t_pile **a, int pos);
+void	move_or_push(t_pile **a, t_pile **b, int pivot, int *last_moved);
+//Trier_b
 int		find_max_pos(t_pile *b, int *max_val);
 void	push_pa_decroissant(t_pile **a, t_pile **b);
 int		find_max_position_in_b(t_pile *b, int *max_val);
-
 void	push_pb_trie_optimus(t_pile **a, t_pile **b);
 void	rotate_opti(t_pile **b, int pos, int size_b);
 int		trouver_position_in_b(t_pile *b, int pos);
-void	diviser_pour_mieux_regner(t_pile **a, t_pile **b);
-void	transferer_pivot(t_pile **a, t_pile **b, t_pivots *pivots);
-void	transferer_pivot10(t_pile **a, t_pile **b, int pivot);
-//void	transferer_pivot(t_pile **a, t_pile **b, int pivot);
-
-//test
-int		position_inferieur_pivot(t_pile *a, int pivot);
-void	move_first_elem_inf_pivot(t_pile **a, int pos);
-
-void	count_instruction(char *instruction);
 int		ft_strcmp(const char *s1, const char *s2);
-void	found_pivot(int val, int *first, int *second, int *third);
-void	move_or_push(t_pile **a, t_pile **b, int pivot, int *last_moved);
-void	ft_free_split(char **bigtab);
-
-void	move_element(t_pile **a, t_pile **b, t_pivots *pivots, int *last_moved);
-//test modification de la mediane en 3 partie pour essayer d'optimiser mieux
 #endif
