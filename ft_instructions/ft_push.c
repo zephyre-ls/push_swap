@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:55:27 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/12 18:02:37 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/14 10:54:54 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	ft_push_pa(t_pile **a, t_pile **b)
 		*b = (*b)->next;
 		ft_lstadd_front(a, tmp_b);
 	}
-	//ft_putendl_fd("pa", 1);
 	count_instruction("pa");
 }
 
@@ -40,7 +39,6 @@ void	ft_push_pb(t_pile **b, t_pile **a)
 		tmp_a = *a;
 		*a = (*a)->next;
 		ft_lstadd_front(b, tmp_a);
-	}	
-	//ft_putendl_fd("pb", 1);
+	}
 	count_instruction("pb");
 }

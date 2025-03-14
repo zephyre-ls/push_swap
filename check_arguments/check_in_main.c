@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 10:22:52 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/26 10:26:32 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/14 11:35:46 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	if_argc_is_2(char **argv, t_pile **a)
 	ft_check_tri(arg_split);
 	i = 0;
 	init_pile(a, i, arg_split);
+	ft_free_split(arg_split);
 }
 
 void	if_argc_more_than_2(int argc, char **argv, t_pile **a)

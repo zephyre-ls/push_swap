@@ -6,7 +6,7 @@
 #    By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/30 15:34:26 by lduflot           #+#    #+#              #
-#    Updated: 2025/03/12 14:52:25 by lduflot          ###   ########.fr        #
+#    Updated: 2025/03/14 11:26:06 by lduflot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,10 @@ FILES = check_arguments/ft_check_arguments_utils.c \
 				ft_initialisation_node/ft_initialisation_node_utils.c \
 				ft_initialisation_node/ft_add_node.c \
 				algo/mediane.c \
-				algo/quicksort_etape1_pile.a.c \
-				algo/quicksort_etape2_pile.b.c \
+				algo/transfert_pivot_utils.c \
+				algo/transfert_pivot.c \
+				algo/transfert_pa_tri3.c \
+				algo/trie_pile_b_after_pb.c \
 				algo/quicksort.c \
 				push_swap.c \
 				main.c

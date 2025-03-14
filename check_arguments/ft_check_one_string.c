@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 11:00:17 by lduflot           #+#    #+#             */
-/*   Updated: 2025/02/12 16:24:22 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/14 11:37:29 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ int	ft_countmot(char const *s)
 	return (nbrword);
 }
 
-char	**ft_freemallocerror(char **bigtab)
+void	ft_free_split(char **bigtab)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (bigtab[i])
@@ -47,7 +47,6 @@ char	**ft_freemallocerror(char **bigtab)
 		i++;
 	}
 	free(bigtab);
-	return (NULL);
 }
 
 int	ft_start(char const *s, int *i)

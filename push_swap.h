@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/12 18:00:41 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/14 11:34:42 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,14 @@ typedef struct piles
 	t_pile	*a;
 	t_pile	*b;
 }				t_piles;
+
+//structure pour mes pivots pour eviter d'avoir 5 arg dans fonction
+typedef struct s_pivots
+{
+	int	pivot1;
+	int	pivot2;
+	int	pivot3;
+}				t_pivots;
 
 /* Vérification des arguments donnés */
 char	error(void);
@@ -95,21 +103,35 @@ void	ft_putchar(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 /* Algo, quick_sort */
-int		mediane(t_pile *a);
+//int		mediane(t_pile *a);
+//void	transferer_pivot10(t_pile **a, t_pile **b, int pivot);
+void	calculer_pivots(t_pile *a, t_pivots *pivots);
 int		pivot_10(t_pile *a);
 void	tri_3_elements(t_pile **a);
+void	tri_2_elements(t_pile **a);
 void	quick_sort(t_pile **a, t_pile **b);
+int		find_max_pos(t_pile *b, int *max_val);
 void	push_pa_decroissant(t_pile **a, t_pile **b);
+int		find_max_position_in_b(t_pile *b, int *max_val);
+
 void	push_pb_trie_optimus(t_pile **a, t_pile **b);
+void	rotate_opti(t_pile **b, int pos, int size_b);
+int		trouver_position_in_b(t_pile *b, int pos);
 void	diviser_pour_mieux_regner(t_pile **a, t_pile **b);
-void	transferer_pivot(t_pile **a, t_pile **b, int pivot);
+void	transferer_pivot(t_pile **a, t_pile **b, t_pivots *pivots);
+void	transferer_pivot10(t_pile **a, t_pile **b, int pivot);
+//void	transferer_pivot(t_pile **a, t_pile **b, int pivot);
 
 //test
-int	position_inferieur_pivot(t_pile *a, int pivot);
+int		position_inferieur_pivot(t_pile *a, int pivot);
 void	move_first_elem_inf_pivot(t_pile **a, int pos);
 
 void	count_instruction(char *instruction);
-int	ft_strcmp(const char *s1, const char *s2);
-size_t	ft_strlcpy(char *dest, const char *src, size_t size);
+int		ft_strcmp(const char *s1, const char *s2);
+void	found_pivot(int val, int *first, int *second, int *third);
+void	move_or_push(t_pile **a, t_pile **b, int pivot, int *last_moved);
+void	ft_free_split(char **bigtab);
 
+void	move_element(t_pile **a, t_pile **b, t_pivots *pivots, int *last_moved);
+//test modification de la mediane en 3 partie pour essayer d'optimiser mieux
 #endif
