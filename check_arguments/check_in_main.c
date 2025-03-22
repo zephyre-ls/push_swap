@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 10:22:52 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/14 11:35:46 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/22 10:30:39 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	if_argc_is_2(char **argv, t_pile **a)
 
 	i = 0;
 	arg_split = ft_split(argv[1]);
-	if (arg_split == NULL || arg_split[0] == NULL || arg_split[1] == NULL)
+	if (arg_split == NULL || arg_split[0] == NULL)
 		error();
 	while (arg_split[i])
 	{

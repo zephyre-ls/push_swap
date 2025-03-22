@@ -6,7 +6,7 @@
 /*   By: lduflot <lduflot@student.42perpignan.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:57:46 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/14 20:47:23 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/22 10:32:07 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ void	ft_swap_sb(t_pile **b);
 void	ft_swap_ss(t_pile **a, t_pile **b);
 
 /* Affichage des instructions */
-void	print_pile(t_pile *a);
+//void	print_pile(t_pile *a);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);

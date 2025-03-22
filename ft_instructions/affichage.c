@@ -6,13 +6,13 @@
 /*   By: lduflot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 14:46:05 by lduflot           #+#    #+#             */
-/*   Updated: 2025/03/14 20:43:38 by lduflot          ###   ########.fr       */
+/*   Updated: 2025/03/22 10:32:31 by lduflot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	print_pile(t_pile *a)
+/*void	print_pile(t_pile *a)
 {
 	t_pile	*tmp;
 
@@ -24,7 +24,7 @@ void	print_pile(t_pile *a)
 		tmp = tmp->next;
 	}
 	ft_putstr_fd("\n", 1);
-}
+}*/
 
 void	count_instruction(char *instruction)
 {
