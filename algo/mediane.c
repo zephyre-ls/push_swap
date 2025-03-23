@@ -12,13 +12,7 @@
 
 #include "../push_swap.h"
 
-/*	tmp_pivot = (tmp_big->val - tmp_little->val);
-	tmp_pivot = tmp_pivot / 2;
-	tmp_pivot = (tmp_pivot + tmp_little->val);
-//	printf("le pivot est: %d\n", tmp_pivot);
-	return (tmp_pivot);
-}*/
-
+// calcul de 3 pivots répartis entre la valeur min et max de pile.a
 void	calculer_pivots(t_pile *a, t_pivots *pivots)
 {
 	t_pile	*tmp;
@@ -43,9 +37,6 @@ void	calculer_pivots(t_pile *a, t_pivots *pivots)
 	pivots->pivot3 = tmp_little->val + 2 * big_min / 3;
 }
 
-//quand 11 element dans .a le pivot devient le 3eme plus grand nombre de .a
-// permet d eviter le cas ou la mediane est plus grande que le 3eme 
-// ²plus grand element
 void	found_pivot(int val, int *first, int *second, int *third)
 {
 	if (val > *first)
@@ -62,7 +53,7 @@ void	found_pivot(int val, int *first, int *second, int *third)
 	else if (val > *third)
 		*third = val;
 }
-
+// calcul du 3 plus grand élément de pile.a lorsqu'il ne reste que 10 elem
 int	pivot_10(t_pile *a)
 {
 	t_pile	*tmp_a;
