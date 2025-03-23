@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-//Envoie pile.b trié décroissante dans pile.a
+// parcourt pile.b pour trouver la position du plus grand
+// envoie dans a en décroissant
 int	find_max_pos(t_pile *b, int *max_val)
 {
 	t_pile	*tmp;
@@ -34,7 +35,7 @@ int	find_max_pos(t_pile *b, int *max_val)
 	}
 	return (max_pos);
 }
-
+// envoie tous les élém de pile.b vers pile.a, décroissant.
 void	push_pa_decroissant(t_pile **a, t_pile **b)
 {
 	int	max_val;
@@ -49,7 +50,7 @@ void	push_pa_decroissant(t_pile **a, t_pile **b)
 		ft_push_pa(a, b);
 	}
 }
-
+//tri 2 elem
 void	tri_2_elements(t_pile **a)
 {
 	int	first;
