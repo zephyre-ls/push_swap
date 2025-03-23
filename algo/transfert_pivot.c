@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
+// déplace un élém de pile.a vers pile.b si sa valeur <= 1er pivot
+// sinon déplace l'éléme à une position inférieure au pivot1 dans la pile 'a'.
 void	move_element(t_pile **a, t_pile **b, t_pivots *pivots, int *last_moved)
 {
 	int	pos;
@@ -28,7 +29,7 @@ void	move_element(t_pile **a, t_pile **b, t_pivots *pivots, int *last_moved)
 		(*last_moved)++;
 	}
 }
-
+// déplace un élém de pile.a vers pile.b si sa valeur <= 1erpivot
 void	transferer_pivot(t_pile **a, t_pile **b, t_pivots *pivots)
 {
 	int	size;
