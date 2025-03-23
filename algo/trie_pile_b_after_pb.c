@@ -50,7 +50,7 @@ void	rotate_opti(t_pile **b, int pos, int size_b)
 		}
 	}
 }
-
+//pousse un élém de a vers b tout en maintenant l'ordre décroissant dans b.
 void	push_pb_trie_optimus(t_pile **a, t_pile **b)
 {
 	int		val;
