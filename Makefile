@@ -53,20 +53,19 @@ OBJS = $(FILES:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@echo "Compile $(NAME), tri poloski tripotripo poloski ..."
+	@echo "Compile $(NAME)"
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.c push_swap.h
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@echo "Mr.Larbin nettoie..."
+	@echo "Nettoyage."
 	@rm -f $(OBJS)
 fclean: clean
-	@echo "Mr.Larbin nettoie encore plus..."
+	@echo "Nettoyage ++."
 	@rm -f $(NAME)
 
 re: fclean all
 
 .PHONY: all clean fclean re
-
